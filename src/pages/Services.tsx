@@ -20,69 +20,36 @@ import {
 const Services = () => {
   const mainServices = [
     {
-      icon: BarChart3,
-      title: "Data Analytics & Visualization",
-      description: "Transform complex data into clear, actionable insights with advanced analytics and interactive visualizations.",
-      features: [
-        "Advanced statistical analysis",
-        "Interactive dashboards",
-        "Predictive modeling",
-        "Real-time monitoring"
-      ]
-    },
-    {
-      icon: Brain,
-      title: "Business Intelligence",
-      description: "Empower decision-making with comprehensive BI solutions that provide deep insights into your business operations.",
-      features: [
-        "Custom BI dashboards",
-        "Performance metrics tracking",
-        "Strategic planning support",
-        "Competitive analysis"
-      ]
-    },
-    {
       icon: Zap,
-      title: "Process Automation",
-      description: "Streamline operations and boost efficiency with intelligent automation solutions tailored to your business needs.",
+      title: "Data Pipeline Automation",
+      description: "Streamline your data workflows with robust automation tools that reduce errors and save time.",
       features: [
-        "Workflow automation",
-        "Data integration pipelines",
-        "Robotic process automation",
-        "Custom API development"
+        "Automated data ingestion",
+        "Error detection and handling",
+        "Workflow orchestration",
+        "Performance optimization"
       ]
     },
     {
       icon: Database,
-      title: "Data Infrastructure",
-      description: "Build robust, scalable data infrastructure that grows with your business and ensures data reliability.",
+      title: "Data Integration & Orchestration",
+      description: "Connect diverse data sources for a unified and accessible data environment.",
       features: [
-        "Cloud data warehousing",
-        "Data lake architecture",
-        "ETL/ELT processes",
-        "Data governance"
-      ]
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Leverage machine learning and AI to forecast trends, identify opportunities, and mitigate risks.",
-      features: [
-        "Machine learning models",
-        "Forecasting algorithms",
-        "Risk assessment",
-        "Market trend analysis"
+        "Multi-source data integration",
+        "Real-time data synchronization",
+        "API orchestration",
+        "Cloud and on-premise connectivity"
       ]
     },
     {
       icon: Shield,
-      title: "Data Security & Compliance",
-      description: "Ensure your data is protected and compliant with industry standards and regulations.",
+      title: "Monitoring & Quality Assurance",
+      description: "Ensure data accuracy and reliability with continuous monitoring and quality checks.",
       features: [
-        "Data encryption",
-        "GDPR compliance",
-        "Security audits",
-        "Access control"
+        "Real-time data monitoring",
+        "Data quality validation",
+        "Anomaly detection",
+        "Compliance reporting"
       ]
     }
   ];
