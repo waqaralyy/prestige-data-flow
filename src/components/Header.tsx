@@ -26,7 +26,7 @@ const Header = () => {
               <span className="text-white font-bold text-sm">PD</span>
             </div>
             <span className="font-display font-semibold text-xl text-foreground">
-              PrestigeData.io
+              Prestige DataOps
             </span>
           </Link>
 
@@ -47,12 +47,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
-            <Button asChild className="bg-gradient-primary hover:opacity-90 transition-opacity">
-              <Link to="/contact">Get Started</Link>
-            </Button>
-          </div>
 
           {/* Mobile menu button */}
           <button
@@ -85,13 +79,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <Button asChild className="w-full bg-gradient-primary">
-                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}
