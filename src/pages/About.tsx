@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { 
   Users, 
@@ -69,24 +70,31 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-hero">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
-              About
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> PrestigeData.io</span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              For over a decade, we've been at the forefront of data innovation, helping businesses 
-              transform their operations through intelligent data solutions and strategic insights.
-            </p>
+    <>
+      <SEO 
+        title="About PrestigeData.io - Expert Data Analytics Team"
+        description="Learn about PrestigeData.io's mission, values, and expert team. Over 10 years of experience helping businesses transform through data analytics and intelligence."
+        keywords="about prestigedata, data analytics team, business intelligence experts, data consulting company"
+        canonical="https://prestigedata.io/about"
+      />
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 bg-gradient-hero">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <header className="text-center space-y-6 max-w-4xl mx-auto">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+                About
+                <span className="bg-gradient-primary bg-clip-text text-transparent"> PrestigeData.io</span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                For over a decade, we've been at the forefront of data innovation, helping businesses 
+                transform their operations through intelligent data solutions and strategic insights.
+              </p>
+            </header>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-primary text-primary-foreground">
@@ -254,8 +262,9 @@ const About = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
