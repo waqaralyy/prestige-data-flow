@@ -21,13 +21,12 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">PD</span>
-            </div>
-            <span className="font-display font-semibold text-xl text-foreground">
-              PrestigeData.io
-            </span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/1f4d2d53-83f7-40aa-90ed-0c0ef015d4e2.png" 
+              alt="Prestige DataOps Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
