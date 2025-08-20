@@ -285,11 +285,10 @@ const Contact = () => {
               <Card className="border-0 shadow-medium">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-3">
-                    How long does a typical project take?
+                    What is PrestigeDataOps?
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Project timelines vary based on scope and complexity. Most projects 
-                    range from 4-12 weeks, with ongoing support available.
+                    PrestigeDataOps provides data operations and integration services to help businesses streamline workflows, improve performance, and automate processes.
                   </p>
                 </CardContent>
               </Card>
@@ -297,11 +296,13 @@ const Contact = () => {
               <Card className="border-0 shadow-medium">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-3">
-                    Do you work with small businesses?
+                    What services do you offer?
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Absolutely! We have solutions tailored for businesses of all sizes, 
-                    from startups to enterprise organizations.
+                    We offer three service packages:<br />
+                    • Basic Trim ($3,000) – Core setup, essential integrations, and standard support.<br />
+                    • Standard Trim ($5,000) – Includes Basic, plus advanced integrations, performance optimization, and extended support.<br />
+                    • Premium Trim ($10,000) – Includes Standard, plus full customization and priority support.
                   </p>
                 </CardContent>
               </Card>
@@ -309,11 +310,21 @@ const Contact = () => {
               <Card className="border-0 shadow-medium">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-3">
-                    What's included in your consulting services?
+                    Who are your services for?
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Our consulting includes strategy development, implementation, 
-                    training, and ongoing support to ensure your success.
+                    Our solutions are for businesses that want to optimize their data workflows and improve efficiency, whether small, medium, or large.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-medium">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-foreground mb-3">
+                    How long does implementation take?
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Depending on the package, implementation usually takes between 2–6 weeks.
                   </p>
                 </CardContent>
               </Card>
@@ -324,8 +335,18 @@ const Contact = () => {
                     Do you provide ongoing support?
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Yes, we offer comprehensive support packages including monitoring, 
-                    maintenance, and optimization services.
+                    Yes, all trims include support, with Premium clients receiving priority support.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-medium">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-foreground mb-3">
+                    Can I upgrade later?
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Yes, you can upgrade your package anytime as your business needs grow.
                   </p>
                 </CardContent>
               </Card>
