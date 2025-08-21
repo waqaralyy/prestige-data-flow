@@ -201,14 +201,6 @@ const Services = () => {
               >
                 <Link to="/contact">Get Free Consultation</Link>
               </Button>
-              <Button 
-                asChild 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary"
-              >
-                <Link to="/about">Learn About Our Team</Link>
-              </Button>
             </div>
             </div>
           </div>

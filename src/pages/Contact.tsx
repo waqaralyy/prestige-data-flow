@@ -250,19 +250,6 @@ const Contact = () => {
                     ))}
                   </address>
 
-                  {/* Quick Response Promise */}
-                  <Card className="border-l-4 border-l-secondary bg-muted">
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-foreground mb-2">
-                        Quick Response Guarantee
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        We understand that time is critical in business. That's why we guarantee 
-                        a response to all inquiries within 24 hours during business days. 
-                        For urgent matters, call us directly.
-                      </p>
-                    </CardContent>
-                  </Card>
                 </aside>
               </div>
             </div>

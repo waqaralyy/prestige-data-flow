@@ -87,9 +87,6 @@ const About = () => {
                 unlock the full potential of their data, driving growth, efficiency, and 
                 competitive advantage in an increasingly data-driven world.
               </p>
-              <Button asChild className="bg-gradient-primary hover:opacity-90">
-                <Link to="/contact">Join Our Mission</Link>
-              </Button>
             </div>
             
             <div className="space-y-6">
