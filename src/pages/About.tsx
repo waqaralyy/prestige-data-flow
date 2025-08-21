@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -44,29 +45,6 @@ const About = () => {
     { icon: Users, number: "50+", label: "Expert Consultants" },
     { icon: Globe, number: "25+", label: "Countries Served" },
     { icon: TrendingUp, number: "95%", label: "Client Retention Rate" }
-  ];
-
-  const timeline = [
-    {
-      year: "2014",
-      title: "Company Founded",
-      description: "Started with a vision to democratize data analytics for businesses of all sizes."
-    },
-    {
-      year: "2017",
-      title: "First Major Contract",
-      description: "Secured our first enterprise-level contract, transforming operations for a Fortune 500 company."
-    },
-    {
-      year: "2020",
-      title: "International Expansion",
-      description: "Expanded operations globally, serving clients across North America, Europe, and Asia."
-    },
-    {
-      year: "2024",
-      title: "AI & Machine Learning",
-      description: "Launched advanced AI and machine learning services, becoming industry leaders in predictive analytics."
-    }
   ];
 
   return (
@@ -194,37 +172,79 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-background">
+      {/* FAQ Section */}
+      <section className="py-20 bg-muted" aria-labelledby="faq-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Our Journey
+          <header className="text-center space-y-4 mb-16">
+            <h2 id="faq-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
+              Frequently Asked Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A decade of innovation, growth, and success in transforming businesses through data.
+              Quick answers to common questions about our services and process.
             </p>
-          </div>
+          </header>
           
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {timeline.map((milestone, index) => (
-                <div key={index} className="flex items-start space-x-6">
-                  <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
-                      {milestone.year}
-                    </div>
-                    {index !== timeline.length - 1 && (
-                      <div className="w-px h-16 bg-border mt-4"></div>
-                    )}
-                  </div>
-                  <div className="flex-1 space-y-2 pb-8">
-                    <h3 className="text-xl font-semibold text-foreground">{milestone.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-background border border-border rounded-lg px-6 shadow-soft">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold text-foreground">What is PrestigeDataOps?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  PrestigeDataOps provides data operations and integration services to help businesses streamline workflows, improve performance, and automate processes.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="bg-background border border-border rounded-lg px-6 shadow-soft">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold text-foreground">What services do you offer?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <p>We offer three service packages:</p>
+                  <ul className="mt-3 space-y-2">
+                    <li>• <strong>Basic Trim ($3,000)</strong> – Core setup, essential integrations, and standard support.</li>
+                    <li>• <strong>Standard Trim ($5,000)</strong> – Includes Basic, plus advanced integrations, performance optimization, and extended support.</li>
+                    <li>• <strong>Premium Trim ($10,000)</strong> – Includes Standard, plus full customization and priority support.</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="bg-background border border-border rounded-lg px-6 shadow-soft">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold text-foreground">Who are your services for?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Our solutions are for businesses that want to optimize their data workflows and improve efficiency, whether small, medium, or large.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="bg-background border border-border rounded-lg px-6 shadow-soft">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold text-foreground">How long does implementation take?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Depending on the package, implementation usually takes between 2–6 weeks.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-background border border-border rounded-lg px-6 shadow-soft">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold text-foreground">Do you provide ongoing support?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Yes, all trims include support, with Premium clients receiving priority support.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="bg-background border border-border rounded-lg px-6 shadow-soft">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold text-foreground">Can I upgrade later?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Yes, you can upgrade your package anytime as your business needs grow.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>

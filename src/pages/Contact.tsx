@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -269,83 +268,6 @@ const Contact = () => {
             </div>
           </section>
         </main>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-muted" aria-labelledby="faq-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center space-y-4 mb-16">
-              <h2 id="faq-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Quick answers to common questions about our services and process.
-              </p>
-            </header>
-            
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="item-1" className="bg-background border border-border rounded-lg px-6 shadow-soft">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-semibold text-foreground">What is PrestigeDataOps?</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    PrestigeDataOps provides data operations and integration services to help businesses streamline workflows, improve performance, and automate processes.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2" className="bg-background border border-border rounded-lg px-6 shadow-soft">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-semibold text-foreground">What services do you offer?</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    <p>We offer three service packages:</p>
-                    <ul className="mt-3 space-y-2">
-                      <li>• <strong>Basic Trim ($3,000)</strong> – Core setup, essential integrations, and standard support.</li>
-                      <li>• <strong>Standard Trim ($5,000)</strong> – Includes Basic, plus advanced integrations, performance optimization, and extended support.</li>
-                      <li>• <strong>Premium Trim ($10,000)</strong> – Includes Standard, plus full customization and priority support.</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3" className="bg-background border border-border rounded-lg px-6 shadow-soft">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-semibold text-foreground">Who are your services for?</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    Our solutions are for businesses that want to optimize their data workflows and improve efficiency, whether small, medium, or large.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4" className="bg-background border border-border rounded-lg px-6 shadow-soft">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-semibold text-foreground">How long does implementation take?</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    Depending on the package, implementation usually takes between 2–6 weeks.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5" className="bg-background border border-border rounded-lg px-6 shadow-soft">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-semibold text-foreground">Do you provide ongoing support?</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    Yes, all trims include support, with Premium clients receiving priority support.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-6" className="bg-background border border-border rounded-lg px-6 shadow-soft">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-semibold text-foreground">Can I upgrade later?</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    Yes, you can upgrade your package anytime as your business needs grow.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          </div>
-        </section>
 
         <Footer />
       </div>
