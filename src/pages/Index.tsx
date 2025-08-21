@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { BarChart3, Brain, Zap, TrendingUp, Users, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-data-analytics.jpg";
 
 const Index = () => {
   const services = [
@@ -83,7 +82,7 @@ const Index = () => {
               
               <div className="relative">
                 <img 
-                  src={heroImage} 
+                  src="/lovable-uploads/9adbf81a-dd0a-426a-b6e0-a8aaeac906d3.png" 
                   alt="Advanced data analytics dashboard showing charts, graphs, and business intelligence visualizations for data-driven decision making" 
                   className="w-full h-auto rounded-2xl shadow-large"
                   loading="eager"
