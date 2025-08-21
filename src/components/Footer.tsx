@@ -52,10 +52,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-3">
-              <li className="text-primary-foreground/80 text-sm">Data Analytics</li>
-              <li className="text-primary-foreground/80 text-sm">Business Intelligence</li>
-              <li className="text-primary-foreground/80 text-sm">Process Automation</li>
-              <li className="text-primary-foreground/80 text-sm">Data Consulting</li>
+              <li className="text-primary-foreground/80 text-sm">Data Pipeline Automation</li>
+              <li className="text-primary-foreground/80 text-sm">Monitoring & Quality Assurance</li>
+              <li className="text-primary-foreground/80 text-sm">Data Integration & Orchestration</li>
             </ul>
           </div>
 
@@ -65,7 +64,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-secondary" />
-                <span className="text-primary-foreground/80 text-sm">info@prestigedata.io</span>
+                <span className="text-primary-foreground/80 text-sm">contact@prestigedataops.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-secondary" />
@@ -84,14 +83,6 @@ const Footer = () => {
           <p className="text-primary-foreground/60 text-sm">
             © 2024 PrestigeData.io. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link to="#" className="text-primary-foreground/60 hover:text-primary-foreground text-sm">
-              Privacy Policy
-            </Link>
-            <Link to="#" className="text-primary-foreground/60 hover:text-primary-foreground text-sm">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
