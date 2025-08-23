@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import { BarChart3, Brain, Zap, TrendingUp, Users, Shield } from "lucide-react";
+import { BarChart3, Brain, Zap, TrendingUp, Users, Shield, Check, Star } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -175,6 +175,132 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-background" aria-labelledby="pricing-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <header className="text-center space-y-4 mb-16">
+              <h2 id="pricing-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
+                Choose Your Perfect Trim
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Select the service package that best fits your business needs and budget.
+              </p>
+            </header>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Basic Trim */}
+              <article>
+                <Card className="border-0 shadow-medium hover:shadow-large transition-all duration-300 h-full relative">
+                  <CardContent className="p-8 text-center space-y-6">
+                    <div className="mx-auto w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center">
+                      <Shield className="h-8 w-8 text-white" aria-hidden="true" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-foreground">Basic Trim</h3>
+                      <div className="text-4xl font-bold text-primary">$3,000</div>
+                    </div>
+                    <div className="space-y-4 text-left">
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Essential setup</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Core integrations</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Standard support</span>
+                      </div>
+                    </div>
+                    <Button asChild className="w-full bg-gradient-primary hover:opacity-90">
+                      <Link to="/contact">Get Started</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </article>
+
+              {/* Standard Trim */}
+              <article>
+                <Card className="border-0 shadow-large hover:shadow-xl transition-all duration-300 h-full relative border-2 border-secondary">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <Star className="h-4 w-4" />
+                      Most Popular
+                    </div>
+                  </div>
+                  <CardContent className="p-8 text-center space-y-6">
+                    <div className="mx-auto w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl flex items-center justify-center">
+                      <TrendingUp className="h-8 w-8 text-white" aria-hidden="true" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-foreground">Standard Trim</h3>
+                      <div className="text-4xl font-bold text-secondary">$5,000</div>
+                    </div>
+                    <div className="space-y-4 text-left">
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Everything in Basic</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Advanced integrations</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Performance optimization</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Extended support</span>
+                      </div>
+                    </div>
+                    <Button asChild className="w-full bg-gradient-to-r from-secondary to-secondary/90 hover:opacity-90">
+                      <Link to="/contact">Get Started</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </article>
+
+              {/* Premium Trim */}
+              <article>
+                <Card className="border-0 shadow-medium hover:shadow-large transition-all duration-300 h-full relative">
+                  <CardContent className="p-8 text-center space-y-6">
+                    <div className="mx-auto w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl flex items-center justify-center">
+                      <Star className="h-8 w-8 text-white" aria-hidden="true" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-foreground">Premium Trim</h3>
+                      <div className="text-4xl font-bold text-accent">$10,000</div>
+                    </div>
+                    <div className="space-y-4 text-left">
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Everything in Standard</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Full customization</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Priority support</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Ongoing optimization</span>
+                      </div>
+                    </div>
+                    <Button asChild className="w-full bg-gradient-to-r from-accent to-accent/90 hover:opacity-90">
+                      <Link to="/contact">Get Started</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </article>
             </div>
           </div>
         </section>
