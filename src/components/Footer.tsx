@@ -13,7 +13,7 @@ const Footer = () => {
                 <span className="text-primary font-bold text-sm">PD</span>
               </div>
               <span className="font-display font-semibold text-xl">
-                PrestigeData.io
+                Prestige Dataops
               </span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
@@ -81,7 +81,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 PrestigeData.io. All rights reserved.
+            © 2024 Prestige Dataops. All rights reserved.
           </p>
         </div>
       </div>

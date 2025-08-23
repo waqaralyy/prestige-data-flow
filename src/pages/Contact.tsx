@@ -44,8 +44,8 @@ const Contact = () => {
   return (
     <>
       <SEO 
-        title="Contact PrestigeData.io - Get Your Free Data Consultation"
-        description="Contact PrestigeData.io for expert data analytics consulting. Get a free consultation to discuss your data challenges and custom solutions. Available 24/7."
+        title="Contact Prestige Dataops - Get Your Free Data Consultation"
+        description="Contact Prestige Dataops for expert data analytics consulting. Get a free consultation to discuss your data challenges and custom solutions. Available 24/7."
         keywords="contact data analytics, free consultation, data consulting contact, business intelligence support"
         canonical="https://prestigedata.io/contact"
       />

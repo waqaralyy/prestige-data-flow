@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="PrestigeData.io - Data Analytics & Consulting Solutions"
+        title="Prestige Dataops - Data Analytics & Consulting Solutions"
         description="Transform your business with advanced data analytics, consulting, and automation solutions. Expert data scientists helping businesses grow through intelligent insights."
         keywords="data analytics, business intelligence, process automation, data consulting, predictive analytics, data visualization"
         canonical="https://prestigedata.io"
@@ -122,7 +122,7 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <article className="space-y-6">
                 <h2 id="about-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
-                  Why Choose PrestigeData.io?
+                  Why Choose Prestige Dataops?
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   With over a decade of experience in data analytics and business intelligence, 

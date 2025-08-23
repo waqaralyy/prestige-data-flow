@@ -83,7 +83,7 @@ const Services = () => {
   return (
     <>
       <SEO 
-        title="Data Analytics Services - PrestigeData.io"
+        title="Data Analytics Services - Prestige Dataops"
         description="Comprehensive data analytics, business intelligence, and automation services. Transform your business with expert data consulting and predictive analytics solutions."
         keywords="data analytics services, business intelligence, process automation, predictive analytics, data infrastructure, data security"
         canonical="https://prestigedata.io/services"

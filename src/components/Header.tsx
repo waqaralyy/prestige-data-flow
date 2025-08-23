@@ -26,7 +26,7 @@ const Header = () => {
               <span className="text-white font-bold text-sm">PD</span>
             </div>
             <span className="font-display font-semibold text-xl text-foreground">
-              PrestigeData.io
+              Prestige Dataops
             </span>
           </Link>
 

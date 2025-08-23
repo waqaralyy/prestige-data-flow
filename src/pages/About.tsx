@@ -44,8 +44,8 @@ const About = () => {
   return (
     <>
       <SEO 
-        title="About PrestigeData.io - Expert Data Analytics Team"
-        description="Learn about PrestigeData.io's mission, values, and expert team. Over 10 years of experience helping businesses transform through data analytics and intelligence."
+        title="About Prestige Dataops - Expert Data Analytics Team"
+        description="Learn about Prestige Dataops's mission, values, and expert team. Over 10 years of experience helping businesses transform through data analytics and intelligence."
         keywords="about prestigedata, data analytics team, business intelligence experts, data consulting company"
         canonical="https://prestigedata.io/about"
       />
@@ -58,7 +58,7 @@ const About = () => {
             <header className="text-center space-y-6 max-w-4xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
                 About
-                <span className="bg-gradient-primary bg-clip-text text-transparent"> PrestigeData.io</span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent"> Prestige Dataops</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 For over a decade, we've been at the forefront of data innovation, helping businesses 

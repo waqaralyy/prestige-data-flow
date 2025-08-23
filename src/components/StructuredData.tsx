@@ -12,13 +12,13 @@ const StructuredData = () => {
     const organizationData = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "PrestigeData.io",
+      "name": "Prestige Dataops",
       "url": "https://prestigedata.io",
       "logo": {
         "@type": "ImageObject",
         "url": "https://prestigedata.io/logo.png"
       },
-      "description": "Transform your business with advanced data analytics, consulting, and automation solutions. PrestigeData.io delivers insights that drive growth.",
+      "description": "Transform your business with advanced data analytics, consulting, and automation solutions. Prestige Dataops delivers insights that drive growth.",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-555-123-4567",
