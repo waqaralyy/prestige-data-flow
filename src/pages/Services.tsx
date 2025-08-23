@@ -175,16 +175,30 @@ const Services = () => {
                 </p>
               </header>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {processSteps.map((step, index) => (
-                  <article key={index} className="text-center space-y-4">
-                    <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
-                      <step.icon className="h-8 w-8 text-white" aria-hidden="true" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                  </article>
-                ))}
+              <div className="relative">
+                {/* Arrow line connecting all steps on desktop */}
+                <div className="hidden lg:block absolute top-8 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-primary opacity-30"></div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                  {processSteps.map((step, index) => (
+                    <article key={index} className="text-center space-y-4 relative">
+                      <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center relative z-10">
+                        <step.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                      </div>
+                      
+                      {/* Arrow pointing to next step (hidden on mobile and last step) */}
+                      {index < processSteps.length - 1 && (
+                        <div className="hidden lg:block absolute top-8 -right-4 transform -translate-y-1/2 z-0">
+                          <div className="w-8 h-0.5 bg-gradient-primary opacity-60"></div>
+                          <div className="absolute -right-1 -top-1 w-0 h-0 border-l-4 border-l-primary border-t-2 border-b-2 border-t-transparent border-b-transparent opacity-60"></div>
+                        </div>
+                      )}
+                      
+                      <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
