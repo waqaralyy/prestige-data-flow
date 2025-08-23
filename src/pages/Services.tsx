@@ -103,13 +103,6 @@ const Services = () => {
                 From analytics to automation, we provide end-to-end data services that transform 
                 how your business operates and competes in today's market.
               </p>
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-gradient-primary hover:opacity-90 text-lg px-8 py-6"
-              >
-                <Link to="/contact">Request a Consultation</Link>
-              </Button>
             </header>
           </div>
         </section>
