@@ -7,14 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
     phone: "",
     message: ""
   });
@@ -37,38 +36,10 @@ const Contact = () => {
     setFormData({
       name: "",
       email: "",
-      company: "",
       phone: "",
       message: ""
     });
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email Us",
-      details: "info@prestigedata.io",
-      subtitle: "General inquiries"
-    },
-    {
-      icon: Phone,
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-      subtitle: "Mon-Fri 9AM-6PM EST"
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      details: "123 Data Street, Suite 100",
-      subtitle: "New York, NY 10001"
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: "Monday - Friday",
-      subtitle: "9:00 AM - 6:00 PM EST"
-    }
-  ];
 
   return (
     <>
@@ -109,56 +80,44 @@ const Contact = () => {
           <main>
             <section className="py-20" aria-labelledby="contact-form-heading">
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                   {/* Contact Form */}
-                  <div className="space-y-8">
-                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md">
+                  <div className="lg:col-start-2 lg:col-span-2 space-y-8">
+                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md max-w-2xl ml-auto">
                       <CardContent className="pt-6">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="space-y-2">
-                              <Label htmlFor="name">Full Name *</Label>
-                              <Input
-                                id="name"
-                                value={formData.name}
-                                onChange={(e) => handleInputChange("name", e.target.value)}
-                                placeholder="John Doe"
-                                required
-                              />
-                            </div>
-                            <div className="space-y-2">
-                              <Label htmlFor="email">Email Address *</Label>
-                              <Input
-                                id="email"
-                                type="email"
-                                value={formData.email}
-                                onChange={(e) => handleInputChange("email", e.target.value)}
-                                placeholder="john@company.com"
-                                required
-                              />
-                            </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="name">Full Name *</Label>
+                            <Input
+                              id="name"
+                              value={formData.name}
+                              onChange={(e) => handleInputChange("name", e.target.value)}
+                              placeholder="John Doe"
+                              required
+                            />
+                          </div>
+                          
+                          <div className="space-y-2">
+                            <Label htmlFor="email">Email Address *</Label>
+                            <Input
+                              id="email"
+                              type="email"
+                              value={formData.email}
+                              onChange={(e) => handleInputChange("email", e.target.value)}
+                              placeholder="john@company.com"
+                              required
+                            />
                           </div>
 
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="space-y-2">
-                              <Label htmlFor="company">Company</Label>
-                              <Input
-                                id="company"
-                                value={formData.company}
-                                onChange={(e) => handleInputChange("company", e.target.value)}
-                                placeholder="Your Company"
-                              />
-                            </div>
-                            <div className="space-y-2">
-                              <Label htmlFor="phone">Phone Number</Label>
-                              <Input
-                                id="phone"
-                                type="tel"
-                                value={formData.phone}
-                                onChange={(e) => handleInputChange("phone", e.target.value)}
-                                placeholder="+1 (555) 123-4567"
-                              />
-                            </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="phone">Phone Number</Label>
+                            <Input
+                              id="phone"
+                              type="tel"
+                              value={formData.phone}
+                              onChange={(e) => handleInputChange("phone", e.target.value)}
+                              placeholder="+1 (555) 123-4567"
+                            />
                           </div>
 
                           <div className="space-y-2">
@@ -185,7 +144,7 @@ const Contact = () => {
                   </div>
 
                   {/* Contact Information */}
-                  <aside className="space-y-8">
+                  <aside className="lg:col-span-1 space-y-8">
                     <div className="space-y-6 text-white">
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
