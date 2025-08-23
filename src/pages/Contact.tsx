@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -17,7 +16,6 @@ const Contact = () => {
     email: "",
     company: "",
     phone: "",
-    service: "",
     message: ""
   });
 
@@ -41,7 +39,6 @@ const Contact = () => {
       email: "",
       company: "",
       phone: "",
-      service: "",
       message: ""
     });
   };
@@ -71,16 +68,6 @@ const Contact = () => {
       details: "Monday - Friday",
       subtitle: "9:00 AM - 6:00 PM EST"
     }
-  ];
-
-  const services = [
-    "Data Analytics & Visualization",
-    "Business Intelligence",
-    "Process Automation",
-    "Data Infrastructure",
-    "Predictive Analytics",
-    "Data Security & Compliance",
-    "General Inquiry"
   ];
 
   return (
@@ -172,22 +159,6 @@ const Contact = () => {
                                 placeholder="+1 (555) 123-4567"
                               />
                             </div>
-                          </div>
-
-                          <div className="space-y-2">
-                            <Label htmlFor="service">Service of Interest</Label>
-                            <Select onValueChange={(value) => handleInputChange("service", value)}>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Select a service" />
-                              </SelectTrigger>
-                              <SelectContent>
-                                {services.map((service) => (
-                                  <SelectItem key={service} value={service}>
-                                    {service}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
                           </div>
 
                           <div className="space-y-2">
