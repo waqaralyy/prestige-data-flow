@@ -225,15 +225,6 @@ const Contact = () => {
 
                   {/* Contact Information */}
                   <aside className="space-y-8">
-                    <header>
-                      <h2 className="text-3xl font-bold text-white mb-4">
-                        Contact Information
-                      </h2>
-                      <p className="text-white/80">
-                        Have questions? Reach out to us through any of these channels.
-                      </p>
-                    </header>
-
                     <div className="space-y-6 text-white">
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
@@ -251,15 +242,6 @@ const Contact = () => {
                         </h3>
                         <p className="text-lg">+1 (555) 123-4567</p>
                         <p className="text-white/80">Mon-Fri 9AM-6PM EST</p>
-                      </div>
-
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
-                          <span>Visit Us</span>
-                        </h3>
-                        <p className="text-lg">123 Data Street, Suite 100</p>
-                        <p className="text-white/80">New York, NY 10001</p>
                       </div>
 
                       <div className="space-y-2">
