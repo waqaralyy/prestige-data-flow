@@ -83,7 +83,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                   {/* Contact Form */}
                   <div className="lg:col-start-2 lg:col-span-2 space-y-8">
-                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md max-w-lg ml-auto">
+                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md max-w-lg">
                       <CardContent className="pt-6">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                           <div className="space-y-2">
