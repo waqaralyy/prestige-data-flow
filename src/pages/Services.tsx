@@ -16,6 +16,7 @@ import {
   Users,
   Lightbulb
 } from "lucide-react";
+import dataPipelineImage from "/lovable-uploads/395926eb-3371-4dd5-9eeb-b0d704899841.png";
 
 const Services = () => {
   const mainServices = [
@@ -124,32 +125,54 @@ const Services = () => {
                 </p>
               </header>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {mainServices.map((service, index) => (
-                  <article key={index}>
-                    <Card className="border-0 shadow-medium hover:shadow-large transition-shadow duration-300 h-full">
-                      <CardHeader className="pb-4">
+              <div className="space-y-20">
+                {mainServices.map((service, index) => {
+                  const isReverse = index === 1; // Second service has reverse layout
+                  const serviceImage = index === 0 ? dataPipelineImage : null; // Only first service has image for now
+                  
+                  return (
+                    <article key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${isReverse ? 'lg:flex-row-reverse' : ''}`}>
+                      {/* Content Side */}
+                      <div className="flex-1 space-y-6">
                         <div className="flex items-center space-x-4">
                           <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
                             <service.icon className="h-6 w-6 text-white" aria-hidden="true" />
                           </div>
-                          <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
+                          <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{service.title}</h3>
                         </div>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                        <ul className="space-y-2" role="list">
+                        <p className="text-lg text-muted-foreground leading-relaxed">{service.description}</p>
+                        <ul className="space-y-3" role="list">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center space-x-3">
                               <div className="w-2 h-2 bg-secondary rounded-full" aria-hidden="true"></div>
-                              <span className="text-sm text-muted-foreground">{feature}</span>
+                              <span className="text-muted-foreground">{feature}</span>
                             </li>
                           ))}
                         </ul>
-                      </CardContent>
-                    </Card>
-                  </article>
-                ))}
+                      </div>
+                      
+                      {/* Image Side */}
+                      <div className="flex-1">
+                        <div className="aspect-video rounded-2xl overflow-hidden bg-muted shadow-large">
+                          {serviceImage ? (
+                            <img 
+                              src={serviceImage} 
+                              alt={`${service.title} visualization`}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                              <div className="text-center space-y-2">
+                                <service.icon className="h-16 w-16 mx-auto opacity-50" />
+                                <p className="text-sm">Image coming soon</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </section>
