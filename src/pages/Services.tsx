@@ -17,6 +17,7 @@ import {
   Lightbulb
 } from "lucide-react";
 import dataPipelineImage from "/lovable-uploads/395926eb-3371-4dd5-9eeb-b0d704899841.png";
+import dataIntegrationImage from "/lovable-uploads/cf3b9af6-96e8-4b8d-98b6-fe3863af875d.png";
 
 const Services = () => {
   const mainServices = [
@@ -128,7 +129,7 @@ const Services = () => {
               <div className="space-y-20">
                 {mainServices.map((service, index) => {
                   const isReverse = index === 1; // Second service has reverse layout
-                  const serviceImage = index === 0 ? dataPipelineImage : null; // Only first service has image for now
+                  const serviceImage = index === 0 ? dataPipelineImage : index === 1 ? dataIntegrationImage : null;
                   
                   return (
                     <article key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${isReverse ? 'lg:flex-row-reverse' : ''}`}>
