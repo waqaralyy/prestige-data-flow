@@ -118,15 +118,6 @@ const Services = () => {
         <main>
           <section className="py-20 bg-background" aria-labelledby="services-heading">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <header className="text-center space-y-4 mb-16">
-                <h2 id="services-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
-                  Our Services
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  We offer a comprehensive suite of data services designed to meet your unique business challenges.
-                </p>
-              </header>
-              
               <div className="space-y-64">
                 {mainServices.map((service, index) => {
                   const isReverse = index === 1; // Second service has reverse layout
