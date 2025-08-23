@@ -109,10 +109,10 @@ const Contact = () => {
           <main>
             <section className="py-20" aria-labelledby="contact-form-heading">
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   {/* Contact Form */}
-                  <div className="lg:col-start-2 lg:col-span-2 space-y-8">
-                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md max-w-2xl ml-auto">
+                  <div className="space-y-8">
+                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md">
                       <CardContent className="pt-6">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -185,7 +185,7 @@ const Contact = () => {
                   </div>
 
                   {/* Contact Information */}
-                  <aside className="lg:col-span-1 space-y-8">
+                  <aside className="space-y-8">
                     <div className="space-y-6 text-white">
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
