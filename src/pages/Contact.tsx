@@ -136,13 +136,7 @@ const Contact = () => {
                     </header>
 
                     <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md">
-                      <CardHeader>
-                        <CardTitle className="flex items-center space-x-2">
-                          <Send className="h-5 w-5 text-primary" aria-hidden="true" />
-                          <span>Contact Form</span>
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                      <CardContent className="pt-6">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2">
@@ -240,24 +234,43 @@ const Contact = () => {
                       </p>
                     </header>
 
-                    <address className="space-y-6 not-italic">
-                      {contactInfo.map((info, index) => (
-                        <Card key={index} className="border-0 shadow-xl bg-white/90 backdrop-blur-md">
-                          <CardContent className="p-6">
-                            <div className="flex items-start space-x-4">
-                              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                                <info.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                              </div>
-                              <div>
-                                <h3 className="font-semibold text-foreground">{info.title}</h3>
-                                <p className="text-muted-foreground font-medium">{info.details}</p>
-                                <p className="text-sm text-muted-foreground">{info.subtitle}</p>
-                              </div>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      ))}
-                    </address>
+                    <div className="space-y-6 text-white">
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-semibold flex items-center space-x-2">
+                          <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <span>Email Us</span>
+                        </h3>
+                        <p className="text-lg">info@prestigedata.io</p>
+                        <p className="text-white/80">General inquiries</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-semibold flex items-center space-x-2">
+                          <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <span>Call Us</span>
+                        </h3>
+                        <p className="text-lg">+1 (555) 123-4567</p>
+                        <p className="text-white/80">Mon-Fri 9AM-6PM EST</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-semibold flex items-center space-x-2">
+                          <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <span>Visit Us</span>
+                        </h3>
+                        <p className="text-lg">123 Data Street, Suite 100</p>
+                        <p className="text-white/80">New York, NY 10001</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-semibold flex items-center space-x-2">
+                          <Clock className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <span>Business Hours</span>
+                        </h3>
+                        <p className="text-lg">Monday - Friday</p>
+                        <p className="text-white/80">9:00 AM - 6:00 PM EST</p>
+                      </div>
+                    </div>
                   </aside>
                 </div>
               </div>
