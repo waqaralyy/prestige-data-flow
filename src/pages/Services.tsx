@@ -127,7 +127,7 @@ const Services = () => {
                 </p>
               </header>
               
-              <div className="space-y-32">
+              <div className="space-y-48">
                 {mainServices.map((service, index) => {
                   const isReverse = index === 1; // Second service has reverse layout
                   const serviceImage = index === 0 ? dataPipelineImage : index === 1 ? dataIntegrationImage : index === 2 ? monitoringQualityImage : null;
