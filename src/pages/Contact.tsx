@@ -151,7 +151,7 @@ const Contact = () => {
                           <Mail className="h-5 w-5 text-secondary flex-shrink-0" aria-hidden="true" />
                           <span>Email Us</span>
                         </h3>
-                        <p className="text-lg">info@prestigedata.io</p>
+                        <p className="text-lg">Contact@prestigedataops.com</p>
                         <p className="text-white/80">General inquiries</p>
                       </div>
 
@@ -161,7 +161,6 @@ const Contact = () => {
                           <span>Call Us</span>
                         </h3>
                         <p className="text-lg">+1 (555) 123-4567</p>
-                        <p className="text-white/80">Mon-Fri 9AM-6PM EST</p>
                       </div>
 
                       <div className="space-y-2">
