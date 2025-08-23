@@ -10,7 +10,6 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import contactBackground from "@/assets/contact-background.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -94,7 +93,7 @@ const Contact = () => {
       />
       <div 
         className="min-h-screen bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(${contactBackground})` }}
+        style={{ backgroundImage: `url(/lovable-uploads/b6f74c33-2ce3-4f87-93d0-f70174c9d334.png)` }}
       >
         {/* Background overlay for better text readability */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
