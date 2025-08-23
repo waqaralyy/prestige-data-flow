@@ -136,12 +136,6 @@ const Contact = () => {
                     </header>
 
                     <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md">
-                      <CardHeader>
-                        <CardTitle className="flex items-center space-x-2">
-                          <Send className="h-5 w-5 text-primary" aria-hidden="true" />
-                          <span>Contact Form</span>
-                        </CardTitle>
-                      </CardHeader>
                       <CardContent>
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
