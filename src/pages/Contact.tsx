@@ -144,7 +144,7 @@ const Contact = () => {
                   </div>
 
                   {/* Contact Information */}
-                  <aside className="lg:col-start-3 lg:col-span-1 space-y-8">
+                  <aside className="lg:col-start-3 lg:col-span-1 space-y-8 mt-8">
                     <div className="space-y-6 text-white">
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
@@ -166,7 +166,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Clock className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
+                          <Clock className="h-5 w-5 text-secondary flex-shrink-0" aria-hidden="true" />
                           <span>Business Hours</span>
                         </h3>
                         <p className="text-lg">Monday - Friday</p>
