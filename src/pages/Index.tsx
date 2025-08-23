@@ -26,13 +26,6 @@ const Index = () => {
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "95%", label: "Client Satisfaction" },
-    { number: "50+", label: "Expert Consultants" },
-    { number: "24/7", label: "Support Available" }
-  ];
-
   return (
     <>
       <SEO 
@@ -89,20 +82,6 @@ const Index = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-primary text-primary-foreground" aria-label="Company Statistics">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold mb-2">{stat.number}</div>
-                  <div className="text-primary-foreground/80">{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
