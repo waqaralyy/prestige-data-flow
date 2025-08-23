@@ -176,22 +176,32 @@ const Services = () => {
               </header>
               
               <div className="relative">
-                {/* Arrow line connecting all steps on desktop */}
-                <div className="hidden lg:block absolute top-8 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-primary opacity-30"></div>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                   {processSteps.map((step, index) => (
                     <article key={index} className="text-center space-y-4 relative">
-                      <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center relative z-10">
-                        <step.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                      {/* Step number */}
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary/10 text-primary text-sm font-bold rounded-full flex items-center justify-center lg:hidden">
+                        {index + 1}
                       </div>
                       
-                      {/* Arrow pointing to next step (hidden on mobile and last step) */}
-                      {index < processSteps.length - 1 && (
-                        <div className="hidden lg:block absolute top-8 -right-4 transform -translate-y-1/2 z-0">
-                          <div className="w-8 h-0.5 bg-gradient-primary opacity-60"></div>
-                          <div className="absolute -right-1 -top-1 w-0 h-0 border-l-4 border-l-primary border-t-2 border-b-2 border-t-transparent border-b-transparent opacity-60"></div>
+                      <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center relative shadow-lg">
+                        <step.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                        
+                        {/* Step number for desktop */}
+                        <div className="hidden lg:flex absolute -top-3 -right-3 w-8 h-8 bg-white border-2 border-primary text-primary text-sm font-bold rounded-full items-center justify-center shadow-md">
+                          {index + 1}
                         </div>
+                      </div>
+                      
+                      {/* Connecting line for desktop */}
+                      {index < processSteps.length - 1 && (
+                        <>
+                          {/* Horizontal line */}
+                          <div className="hidden lg:block absolute top-8 right-0 w-full h-px bg-gradient-to-r from-primary/30 to-primary/10 transform translate-x-8"></div>
+                          
+                          {/* Arrow */}
+                          <div className="hidden lg:block absolute top-7 right-2 w-3 h-3 border-r-2 border-t-2 border-primary/40 transform rotate-45 translate-x-8"></div>
+                        </>
                       )}
                       
                       <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
