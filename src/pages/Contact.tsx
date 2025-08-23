@@ -78,7 +78,7 @@ const Contact = () => {
 
           {/* Contact Form & Info Section */}
           <main>
-            <section className="py-12" aria-labelledby="contact-form-heading">
+            <section className="py-8" aria-labelledby="contact-form-heading">
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                   {/* Contact Form */}
@@ -148,7 +148,7 @@ const Contact = () => {
                     <div className="space-y-6 text-white">
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Mail className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
+                          <Mail className="h-5 w-5 text-secondary flex-shrink-0" aria-hidden="true" />
                           <span>Email Us</span>
                         </h3>
                         <p className="text-lg">info@prestigedata.io</p>
@@ -157,7 +157,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Phone className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
+                          <Phone className="h-5 w-5 text-accent flex-shrink-0" aria-hidden="true" />
                           <span>Call Us</span>
                         </h3>
                         <p className="text-lg">+1 (555) 123-4567</p>
