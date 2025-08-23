@@ -273,38 +273,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl lg:text-4xl font-bold">
-              Ready to Work Together?
-            </h2>
-            <p className="text-xl opacity-90">
-              Join hundreds of satisfied clients who have transformed their businesses with our data solutions. 
-              Let's start your journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                size="lg" 
-                variant="secondary"
-                className="text-lg px-8 py-6"
-              >
-                <Link to="/contact">Start Your Project</Link>
-              </Button>
-              <Button 
-                asChild 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary"
-              >
-                <Link to="/services">Explore Services</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
         <Footer />
       </div>
