@@ -83,7 +83,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                   {/* Contact Form */}
                   <div className="lg:col-start-1 lg:col-span-2 space-y-8">
-                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md max-w-lg">
+                    <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-md max-w-lg ml-[15%]">
                       <CardContent className="pt-6">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                           <div className="space-y-2">
@@ -148,7 +148,7 @@ const Contact = () => {
                     <div className="space-y-6 text-white">
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <Mail className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
                           <span>Email Us</span>
                         </h3>
                         <p className="text-lg">info@prestigedata.io</p>
@@ -157,7 +157,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <Phone className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
                           <span>Call Us</span>
                         </h3>
                         <p className="text-lg">+1 (555) 123-4567</p>
@@ -166,7 +166,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Clock className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <Clock className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
                           <span>Business Hours</span>
                         </h3>
                         <p className="text-lg">Monday - Friday</p>
