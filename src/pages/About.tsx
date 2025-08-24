@@ -40,6 +40,13 @@ const About = () => {
     }
   ];
 
+  const stats = [
+    { number: "10+", label: "Years Experience" },
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Enterprise Clients" },
+    { number: "99%", label: "Client Satisfaction" }
+  ];
+
 
   return (
     <>
@@ -53,93 +60,190 @@ const About = () => {
         <Header />
         
         {/* Hero Section */}
-        <section className="pt-24 pb-16 bg-muted">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center space-y-6 max-w-4xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+        <section className="relative pt-24 pb-32 overflow-hidden">
+          {/* Background Elements */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center space-y-8 max-w-5xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+                <Award className="h-4 w-4" />
+                Industry Leading Data Operations
+              </div>
+              
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 About
-                <span className="text-primary"> Prestige Dataops</span>
+                <span className="block text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text">
+                  Prestige Dataops
+                </span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              
+              <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
                 For over a decade, we've been at the forefront of data innovation, helping businesses 
                 transform their operations through intelligent data solutions and strategic insights.
               </p>
-            </header>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg">
+                  <Link to="/contact" className="flex items-center gap-2">
+                    Get Started
+                    <TrendingUp className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 px-8 py-3 text-lg">
+                  <Link to="/services">
+                    Our Services
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-20 bg-background relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="p-8 rounded-2xl bg-gradient-to-br from-card to-muted border border-border hover:shadow-large transition-all duration-300 group-hover:scale-105">
+                    <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.number}</div>
+                    <div className="text-muted-foreground font-medium">{stat.label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
 
       {/* Mission Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                Our Mission
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe that every organization, regardless of size, should have access to 
-                enterprise-grade data analytics and intelligence. Our mission is to democratize 
-                data science and make advanced analytics accessible to businesses worldwide.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Through our innovative solutions and expert guidance, we help organizations 
-                unlock the full potential of their data, driving growth, efficiency, and 
-                competitive advantage in an increasingly data-driven world.
-              </p>
+      <section className="py-24 bg-muted relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary/20 to-transparent"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  <Globe className="h-4 w-4" />
+                  Our Mission
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                  Democratizing Data Science for
+                  <span className="text-primary"> Everyone</span>
+                </h2>
+              </div>
+              
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We believe that every organization, regardless of size, should have access to 
+                  enterprise-grade data analytics and intelligence. Our mission is to democratize 
+                  data science and make advanced analytics accessible to businesses worldwide.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Through our innovative solutions and expert guidance, we help organizations 
+                  unlock the full potential of their data, driving growth, efficiency, and 
+                  competitive advantage in an increasingly data-driven world.
+                </p>
+              </div>
+              
+              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                <Link to="/services" className="flex items-center gap-2">
+                  Explore Our Solutions
+                  <TrendingUp className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
             
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-foreground">What Sets Us Apart</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Clock className="h-6 w-6 text-secondary mt-1" />
-                  <div>
-                    <h4 className="font-medium text-foreground">Rapid Implementation</h4>
-                    <p className="text-muted-foreground">Get up and running with our solutions in weeks, not months.</p>
+            <div className="space-y-8">
+              <Card className="border-0 shadow-large bg-gradient-to-br from-card to-background">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold text-foreground mb-6">What Sets Us Apart</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Clock className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1">Rapid Implementation</h4>
+                        <p className="text-muted-foreground">Get up and running with our solutions in weeks, not months.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-4 p-4 rounded-xl bg-secondary/5 border border-secondary/10">
+                      <div className="p-2 bg-secondary/10 rounded-lg">
+                        <TrendingUp className="h-5 w-5 text-secondary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1">Proven ROI</h4>
+                        <p className="text-muted-foreground">Our clients typically see 3x return on investment within the first year.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-4 p-4 rounded-xl bg-accent/5 border border-accent/10">
+                      <div className="p-2 bg-accent/10 rounded-lg">
+                        <Users className="h-5 w-5 text-accent" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1">Expert Team</h4>
+                        <p className="text-muted-foreground">Work with certified data scientists and industry experts.</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <TrendingUp className="h-6 w-6 text-secondary mt-1" />
-                  <div>
-                    <h4 className="font-medium text-foreground">Proven ROI</h4>
-                    <p className="text-muted-foreground">Our clients typically see 3x return on investment within the first year.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Users className="h-6 w-6 text-secondary mt-1" />
-                  <div>
-                    <h4 className="font-medium text-foreground">Expert Team</h4>
-                    <p className="text-muted-foreground">Work with certified data scientists and industry experts.</p>
-                  </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Our Values
+      <section className="py-24 bg-background relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-secondary/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-accent/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center space-y-6 mb-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <Shield className="h-4 w-4" />
+              Our Core Values
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              The Principles That
+              <span className="text-primary"> Drive Us</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide every decision we make and every solution we deliver.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Every decision we make and every solution we deliver is guided by these fundamental values.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-medium hover:shadow-large transition-shadow duration-300 text-center">
-                <CardContent className="p-8 space-y-4">
-                  <div className="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
-                    <value.icon className="h-8 w-8 text-white" />
+              <Card key={index} className="group border-0 shadow-medium hover:shadow-large transition-all duration-500 bg-gradient-to-br from-card to-background hover:scale-105">
+                <CardContent className="p-8 text-center space-y-6">
+                  <div className="relative">
+                    <div className="mx-auto w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300">
+                      <value.icon className="h-10 w-10 text-white" />
+                    </div>
+                    <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                      {value.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {value.description}
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -148,127 +252,167 @@ const About = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-muted" aria-labelledby="faq-heading">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <header className="text-center space-y-6 mb-20">
-            <h2 id="faq-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
-              Frequently Asked Questions
+      <section className="py-24 bg-muted relative overflow-hidden" aria-labelledby="faq-heading">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <header className="text-center space-y-8 mb-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <Lightbulb className="h-4 w-4" />
+              Got Questions?
+            </div>
+            <h2 id="faq-heading" className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              Frequently Asked
+              <span className="text-primary"> Questions</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Quick answers to common questions about our services and process.
             </p>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </header>
           
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-6">
-              <AccordionItem value="item-1" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-1" className="bg-gradient-to-br from-card to-background border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">01</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold">01</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">What is PrestigeDataOps?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-primary transition-colors duration-300">What is PrestigeDataOps?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
-                    PrestigeDataOps provides data operations and integration services to help businesses streamline workflows, improve performance, and automate processes.
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">02</span>
-                    </div>
-                    <span className="font-semibold text-foreground text-lg">What services do you offer?</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14 space-y-4">
-                    <p>We offer three comprehensive service packages:</p>
-                    <div className="space-y-3">
-                      <div className="p-4 bg-muted/30 rounded-xl border-l-4 border-primary">
-                        <p><strong className="text-primary">Basic Trim ($3,000)</strong> – Core setup, essential integrations, and standard support.</p>
-                      </div>
-                      <div className="p-4 bg-muted/30 rounded-xl border-l-4 border-secondary">
-                        <p><strong className="text-secondary">Standard Trim ($5,000)</strong> – Includes Basic, plus advanced integrations, performance optimization, and extended support.</p>
-                      </div>
-                      <div className="p-4 bg-muted/30 rounded-xl border-l-4 border-accent">
-                        <p><strong className="text-accent">Premium Trim ($10,000)</strong> – Includes Standard, plus full customization and priority support.</p>
-                      </div>
+                  <div className="pl-16 pt-2">
+                    <p className="mb-4">PrestigeDataOps provides comprehensive data operations and integration services to help businesses streamline workflows, improve performance, and automate processes.</p>
+                    <div className="p-4 bg-primary/5 rounded-xl border-l-4 border-primary">
+                      <p className="text-sm text-primary font-medium">We specialize in making complex data operations simple and accessible for businesses of all sizes.</p>
                     </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-2" className="bg-gradient-to-br from-card to-background border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">03</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold">02</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">Who are your services for?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-secondary transition-colors duration-300">What services do you offer?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
+                  <div className="pl-16 pt-2 space-y-6">
+                    <p>We offer three comprehensive service packages designed to meet different business needs:</p>
+                    <div className="grid gap-4">
+                      <div className="p-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                        <h4 className="font-bold text-primary text-lg mb-2">Basic Trim - $3,000</h4>
+                        <p className="text-muted-foreground">Core setup, essential integrations, and standard support to get you started.</p>
+                      </div>
+                      <div className="p-6 bg-gradient-to-r from-secondary/10 to-secondary/5 rounded-xl border border-secondary/20">
+                        <h4 className="font-bold text-secondary text-lg mb-2">Standard Trim - $5,000</h4>
+                        <p className="text-muted-foreground">Includes Basic, plus advanced integrations, performance optimization, and extended support.</p>
+                      </div>
+                      <div className="p-6 bg-gradient-to-r from-accent/10 to-accent/5 rounded-xl border border-accent/20">
+                        <h4 className="font-bold text-accent text-lg mb-2">Premium Trim - $10,000</h4>
+                        <p className="text-muted-foreground">Includes Standard, plus full customization, priority support, and dedicated account management.</p>
+                      </div>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* ... keep existing FAQ items 3-6 with enhanced styling ... */}
+              <AccordionItem value="item-3" className="bg-gradient-to-br from-card to-background border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold">03</span>
+                    </div>
+                    <span className="font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Who are your services for?</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
+                  <div className="pl-16 pt-2">
                     Our solutions are designed for businesses of all sizes that want to optimize their data workflows and improve efficiency, whether you're a growing startup, established company, or large enterprise.
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-4" className="bg-gradient-to-br from-card to-background border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">04</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold">04</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">How long does implementation take?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-primary transition-colors duration-300">How long does implementation take?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
+                  <div className="pl-16 pt-2">
                     Implementation timeframes vary by package complexity, typically ranging from 2–6 weeks. We work efficiently to get you up and running as quickly as possible.
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-5" className="bg-gradient-to-br from-card to-background border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">05</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold">05</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">Do you provide ongoing support?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-secondary transition-colors duration-300">Do you provide ongoing support?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
+                  <div className="pl-16 pt-2">
                     Yes! All service tiers include comprehensive support, with Premium clients receiving priority assistance and faster response times.
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-6" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-6" className="bg-gradient-to-br from-card to-background border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">06</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold">06</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">Can I upgrade later?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Can I upgrade later?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
+                  <div className="pl-16 pt-2">
                     Absolutely! You can seamlessly upgrade your package at any time as your business requirements evolve and grow.
                   </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+          </div>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-20">
+          <div className="text-center bg-gradient-to-br from-primary to-secondary rounded-3xl p-12 shadow-2xl">
+            <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Data Operations?</h3>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help optimize your data workflows and drive business growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm">
+                <Link to="/contact" className="flex items-center gap-2">
+                  <Users className="h-5 w-5" />
+                  Schedule Consultation
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm">
+                <Link to="/services" className="flex items-center gap-2">
+                  <Globe className="h-5 w-5" />
+                  View Our Services
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
