@@ -256,8 +256,8 @@ const About = () => {
               <AccordionItem value="item-1" className="bg-card border rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-primary-foreground font-bold">01</span>
+                    <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-secondary-foreground font-bold">01</span>
                     </div>
                     <span className="font-bold text-foreground text-lg group-hover:text-primary transition-colors duration-300">What is PrestigeDataOps?</span>
                   </div>
@@ -305,8 +305,8 @@ const About = () => {
               <AccordionItem value="item-3" className="bg-card border rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-accent-foreground font-bold">03</span>
+                    <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-secondary-foreground font-bold">03</span>
                     </div>
                     <span className="font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Who are your services for?</span>
                   </div>
@@ -321,8 +321,8 @@ const About = () => {
               <AccordionItem value="item-4" className="bg-card border rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-primary-foreground font-bold">04</span>
+                    <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-secondary-foreground font-bold">04</span>
                     </div>
                     <span className="font-bold text-foreground text-lg group-hover:text-primary transition-colors duration-300">How long does implementation take?</span>
                   </div>
@@ -353,8 +353,8 @@ const About = () => {
               <AccordionItem value="item-6" className="bg-card border rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 overflow-hidden group hover:scale-[1.02]">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-accent-foreground font-bold">06</span>
+                    <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-secondary-foreground font-bold">06</span>
                     </div>
                     <span className="font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Can I upgrade later?</span>
                   </div>
