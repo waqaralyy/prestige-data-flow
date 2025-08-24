@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import aboutHeroBackground from "@/assets/about-hero-background.jpg";
 import { 
   Users, 
   Award, 
@@ -61,10 +60,7 @@ const About = () => {
         <Header />
         
         {/* Hero Section */}
-        <section 
-          className="relative pt-24 pb-32 bg-background bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${aboutHeroBackground})` }}
-        >
+        <section className="relative pt-24 pb-32 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center space-y-8 max-w-5xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
