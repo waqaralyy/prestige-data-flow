@@ -308,81 +308,145 @@ const Index = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-24 bg-background" aria-labelledby="testimonials-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              {/* Section Header */}
-              <div className="text-center mb-20">
-                <h2 id="testimonials-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                  Client Success Stories
-                </h2>
-                <div className="w-24 h-1 bg-primary mx-auto"></div>
+        <section className="py-20 bg-background relative overflow-hidden" aria-labelledby="testimonials-heading">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <header className="text-center space-y-4 mb-16">
+              <h2 id="testimonials-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
+                Trusted by Industry Leaders
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                See how we've transformed businesses through data-driven solutions
+              </p>
+            </header>
+            
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* First Testimonial */}
+                <article className="group">
+                  <div className="relative p-8 bg-card rounded-3xl shadow-medium hover:shadow-large transition-all duration-500 transform group-hover:-translate-y-2 border border-border/50">
+                    {/* Quote Background */}
+                    <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                      <Quote className="h-8 w-8 text-white" />
+                    </div>
+                    
+                    <div className="space-y-6 pt-4">
+                      <blockquote className="text-lg text-foreground leading-relaxed">
+                        "Prestige DataOps helped us turn raw data into valuable insights that improved our decision-making."
+                      </blockquote>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          <div className="relative">
+                            <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary/80 rounded-full flex items-center justify-center">
+                              <span className="text-white font-bold text-lg">JD</span>
+                            </div>
+                            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background"></div>
+                          </div>
+                          <div>
+                            <cite className="text-foreground font-semibold text-lg not-italic">John D.</cite>
+                            <p className="text-muted-foreground">Operations Manager</p>
+                          </div>
+                        </div>
+                        <div className="flex space-x-1">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                {/* Second Testimonial */}
+                <article className="group lg:mt-8">
+                  <div className="relative p-8 bg-card rounded-3xl shadow-medium hover:shadow-large transition-all duration-500 transform group-hover:-translate-y-2 border border-border/50">
+                    {/* Quote Background */}
+                    <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                      <Quote className="h-8 w-8 text-white" />
+                    </div>
+                    
+                    <div className="space-y-6 pt-4">
+                      <blockquote className="text-lg text-foreground leading-relaxed">
+                        "Fast, reliable, and professional. They made our data process simple and effective."
+                      </blockquote>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          <div className="relative">
+                            <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center">
+                              <span className="text-white font-bold text-lg">SM</span>
+                            </div>
+                            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background"></div>
+                          </div>
+                          <div>
+                            <cite className="text-foreground font-semibold text-lg not-italic">Sarah M.</cite>
+                            <p className="text-muted-foreground">Business Analyst</p>
+                          </div>
+                        </div>
+                        <div className="flex space-x-1">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
               </div>
               
-              {/* Testimonials Layout */}
-              <div className="space-y-16">
-                {/* First Testimonial - Left Aligned */}
-                <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-                  <div className="lg:col-span-7 space-y-8">
-                    <div className="relative">
-                      <Quote className="absolute -top-4 -left-4 h-12 w-12 text-primary/20" />
-                      <blockquote className="text-2xl lg:text-3xl font-light text-foreground leading-relaxed pl-8">
-                        Prestige DataOps helped us turn raw data into valuable insights that improved our decision-making.
-                      </blockquote>
-                    </div>
+              {/* Trust Indicators */}
+              <div className="mt-16 text-center">
+                <p className="text-muted-foreground mb-8">Trusted by 100+ companies worldwide</p>
+                <div className="flex justify-center items-center space-x-8 opacity-60">
+                  <div className="w-24 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-sm font-semibold">CORP A</span>
                   </div>
-                  
-                  <div className="lg:col-span-5">
-                    <div className="flex items-center space-x-6 lg:justify-end">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-xl">JD</span>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-foreground">John D.</h3>
-                        <p className="text-muted-foreground">Operations Manager</p>
-                        <div className="flex space-x-1 mt-2">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                  <div className="w-24 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-sm font-semibold">CORP B</span>
                   </div>
-                </article>
-                
-                {/* Divider */}
-                <div className="flex justify-center">
-                  <div className="w-32 h-px bg-border"></div>
+                  <div className="w-24 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-sm font-semibold">CORP C</span>
+                  </div>
                 </div>
-                
-                {/* Second Testimonial - Right Aligned */}
-                <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-                  <div className="lg:col-span-5 order-2 lg:order-1">
-                    <div className="flex items-center space-x-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-xl">SM</span>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-foreground">Sarah M.</h3>
-                        <p className="text-muted-foreground">Business Analyst</p>
-                        <div className="flex space-x-1 mt-2">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="lg:col-span-7 space-y-8 order-1 lg:order-2">
-                    <div className="relative lg:text-right">
-                      <Quote className="absolute -top-4 -right-4 h-12 w-12 text-secondary/20 transform scale-x-[-1]" />
-                      <blockquote className="text-2xl lg:text-3xl font-light text-foreground leading-relaxed pr-8">
-                        Fast, reliable, and professional. They made our data process simple and effective.
-                      </blockquote>
-                    </div>
-                  </div>
-                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-primary text-white" aria-labelledby="cta-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-3xl mx-auto space-y-6">
+              <h2 id="cta-heading" className="text-3xl lg:text-4xl font-bold">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl opacity-90">
+                Let's discuss how our data solutions can drive your business forward. 
+                Get a free consultation with our experts today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  variant="secondary"
+                  className="text-lg px-8 py-6"
+                >
+                  <Link to="/contact">Schedule a Consultation</Link>
+                </Button>
+                <Button 
+                  asChild 
+                  size="lg" 
+                  variant="secondary" 
+                  className="text-lg px-8 py-6"
+                >
+                  <Link to="/services">View All Services</Link>
+                </Button>
               </div>
             </div>
           </div>
