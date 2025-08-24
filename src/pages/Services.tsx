@@ -136,12 +136,12 @@ const Services = () => {
                       
                       {/* Image Side */}
                       <div className="flex-1">
-                        <div className="aspect-video rounded-2xl overflow-hidden bg-muted shadow-large">
+                        <div className="aspect-video rounded-2xl overflow-hidden bg-muted shadow-large transition-all duration-300 hover:shadow-xl hover:scale-105 group">
                           {serviceImage ? (
                             <img 
                               src={serviceImage} 
                               alt={`${service.title} visualization`}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
                             />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-muted-foreground">
