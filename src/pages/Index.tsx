@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import { BarChart3, Brain, Zap, TrendingUp, Users, Shield, Check, Star } from "lucide-react";
+import { BarChart3, Brain, Zap, TrendingUp, Users, Shield, Check, Star, Quote } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -300,6 +300,70 @@ const Index = () => {
                     <Button asChild className="w-full bg-accent hover:bg-accent">
                       <Link to="/contact">Get Started</Link>
                     </Button>
+                  </CardContent>
+                </Card>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 bg-muted" aria-labelledby="testimonials-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <header className="text-center space-y-4 mb-16">
+              <h2 id="testimonials-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Discover how we've helped businesses transform their data into competitive advantages
+              </p>
+            </header>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <article className="relative">
+                <Card className="border-0 shadow-large hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
+                  <CardContent className="p-8 relative">
+                    <div className="absolute top-6 right-6 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Quote className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="space-y-6">
+                      <blockquote className="text-lg text-foreground leading-relaxed italic">
+                        "Prestige DataOps helped us turn raw data into valuable insights that improved our decision-making."
+                      </blockquote>
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">JD</span>
+                        </div>
+                        <div>
+                          <cite className="text-foreground font-semibold not-italic">John D.</cite>
+                          <p className="text-muted-foreground text-sm">Operations Manager</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </article>
+
+              <article className="relative">
+                <Card className="border-0 shadow-large hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
+                  <CardContent className="p-8 relative">
+                    <div className="absolute top-6 right-6 w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
+                      <Quote className="h-6 w-6 text-secondary" />
+                    </div>
+                    <div className="space-y-6">
+                      <blockquote className="text-lg text-foreground leading-relaxed italic">
+                        "Fast, reliable, and professional. They made our data process simple and effective."
+                      </blockquote>
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">SM</span>
+                        </div>
+                        <div>
+                          <cite className="text-foreground font-semibold not-italic">Sarah M.</cite>
+                          <p className="text-muted-foreground text-sm">Business Analyst</p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </article>
