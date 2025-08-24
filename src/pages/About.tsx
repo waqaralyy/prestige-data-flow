@@ -368,30 +368,6 @@ const About = () => {
             </Accordion>
           </div>
         </div>
-        
-        {/* Call to Action */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-          <div className="text-center bg-primary rounded-3xl p-12 shadow-2xl">
-            <h3 className="text-3xl font-bold text-primary-foreground mb-4">Ready to Transform Your Data Operations?</h3>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help optimize your data workflows and drive business growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-card border-primary-foreground/20 text-primary hover:bg-card/90">
-                <Link to="/contact" className="flex items-center gap-2">
-                  <Users className="h-5 w-5" />
-                  Schedule Consultation
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-card border-primary-foreground/20 text-primary hover:bg-card/90">
-                <Link to="/services" className="flex items-center gap-2">
-                  <Globe className="h-5 w-5" />
-                  View Our Services
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
       </section>
 
 
