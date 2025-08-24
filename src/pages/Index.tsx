@@ -342,12 +342,6 @@ const Index = () => {
                       
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <div className="relative">
-                            <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary/80 rounded-full flex items-center justify-center">
-                              <span className="text-white font-bold text-lg">JD</span>
-                            </div>
-                            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background"></div>
-                          </div>
                           <div>
                             <cite className="text-foreground font-semibold text-lg not-italic">John D.</cite>
                             <p className="text-muted-foreground">Operations Manager</p>
@@ -378,12 +372,6 @@ const Index = () => {
                       
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <div className="relative">
-                            <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center">
-                              <span className="text-white font-bold text-lg">SM</span>
-                            </div>
-                            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background"></div>
-                          </div>
                           <div>
                             <cite className="text-foreground font-semibold text-lg not-italic">Sarah M.</cite>
                             <p className="text-muted-foreground">Business Analyst</p>
