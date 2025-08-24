@@ -308,7 +308,7 @@ const About = () => {
                     <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-secondary-foreground font-bold">03</span>
                     </div>
-                    <span className="font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Who are your services for?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-primary transition-colors duration-300">Who are your services for?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
@@ -356,7 +356,7 @@ const About = () => {
                     <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-secondary-foreground font-bold">06</span>
                     </div>
-                    <span className="font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Can I upgrade later?</span>
+                    <span className="font-bold text-foreground text-lg group-hover:text-primary transition-colors duration-300">Can I upgrade later?</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
