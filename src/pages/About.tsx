@@ -13,7 +13,11 @@ import {
   Target,
   Lightbulb,
   Shield,
-  Clock
+  Clock,
+  Calendar,
+  Briefcase,
+  Building,
+  Heart
 } from "lucide-react";
 
 const About = () => {
@@ -41,10 +45,35 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "10+", label: "Years Experience" },
-    { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Enterprise Clients" },
-    { number: "99%", label: "Client Satisfaction" }
+    { 
+      number: "10+", 
+      label: "Years Experience",
+      icon: Calendar,
+      color: "primary",
+      description: "A decade of data expertise"
+    },
+    { 
+      number: "500+", 
+      label: "Projects Completed",
+      icon: Briefcase,
+      color: "secondary", 
+      description: "Successfully delivered solutions"
+    },
+    { 
+      number: "50+", 
+      label: "Enterprise Clients",
+      icon: Building,
+      color: "accent",
+      description: "Trusted by industry leaders"
+    },
+    { 
+      number: "99%", 
+      label: "Client Satisfaction",
+      icon: Heart,
+      color: "primary",
+      description: "Exceptional service quality",
+      isPercentage: true
+    }
   ];
 
 
@@ -98,16 +127,93 @@ const About = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-muted">
+        <section className="py-24 bg-gradient-to-br from-muted/50 to-muted">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+                <TrendingUp className="h-4 w-4" />
+                PROVEN TRACK RECORD
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Our Results Speak for
+                <span className="text-primary"> Themselves</span>
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="p-8 rounded-2xl bg-card border border-border hover:shadow-large transition-all duration-300 group-hover:scale-105">
-                    <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.number}</div>
-                    <div className="text-muted-foreground font-medium">{stat.label}</div>
-                  </div>
-                </div>
+                <Card key={index} className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/20">
+                  {/* Gradient overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${
+                    stat.color === 'primary' ? 'from-primary/10 to-primary/5' :
+                    stat.color === 'secondary' ? 'from-secondary/10 to-secondary/5' :
+                    'from-accent/10 to-accent/5'
+                  } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  
+                  <CardContent className="relative p-8 text-center space-y-6">
+                    {/* Icon */}
+                    <div className={`mx-auto w-20 h-20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg ${
+                      stat.color === 'primary' ? 'bg-gradient-to-br from-primary to-primary/80 group-hover:shadow-primary/25' :
+                      stat.color === 'secondary' ? 'bg-gradient-to-br from-secondary to-secondary/80 group-hover:shadow-secondary/25' :
+                      'bg-gradient-to-br from-accent to-accent/80 group-hover:shadow-accent/25'
+                    }`}>
+                      <stat.icon className="h-10 w-10 text-white" aria-hidden="true" />
+                    </div>
+                    
+                    {/* Number - Special treatment for percentage */}
+                    {stat.isPercentage ? (
+                      <div className="relative">
+                        <div className="mx-auto w-24 h-24 relative">
+                          {/* Circular progress background */}
+                          <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="40"
+                              fill="transparent"
+                              stroke="currentColor"
+                              strokeWidth="8"
+                              className="text-muted/30"
+                            />
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="40"
+                              fill="transparent"
+                              stroke="currentColor"
+                              strokeWidth="8"
+                              strokeDasharray="251.2"
+                              strokeDashoffset="25.12"
+                              strokeLinecap="round"
+                              className="text-primary transition-all duration-1000 group-hover:stroke-dashoffset-0"
+                            />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-3xl font-bold text-primary">{stat.number}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className={`text-5xl lg:text-6xl font-bold transition-colors duration-300 ${
+                        stat.color === 'primary' ? 'text-primary group-hover:text-primary/80' :
+                        stat.color === 'secondary' ? 'text-secondary group-hover:text-secondary/80' :
+                        'text-accent group-hover:text-accent/80'
+                      }`}>
+                        {stat.number}
+                      </div>
+                    )}
+                    
+                    {/* Label */}
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                        {stat.label}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {stat.description}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
