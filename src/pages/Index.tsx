@@ -308,99 +308,81 @@ const Index = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-24 bg-muted relative" aria-labelledby="testimonials-heading">
+        <section className="py-24 bg-background" aria-labelledby="testimonials-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center space-y-4 mb-20">
-              <h2 id="testimonials-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Discover how we've helped businesses unlock their data potential
-              </p>
-            </header>
-            
-            {/* Testimonials Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              {/* Testimonial 1 */}
-              <article className="relative">
-                <div className="relative z-10 bg-background rounded-2xl p-8 shadow-xl border border-border/50">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
-                        JD
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">John D.</h3>
-                        <p className="text-sm text-muted-foreground">Operations Manager</p>
-                      </div>
-                    </div>
-                    
-                    <blockquote className="text-foreground text-lg leading-relaxed">
-                      "Prestige DataOps helped us turn raw data into valuable insights that improved our decision-making."
-                    </blockquote>
-                    
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-secondary text-secondary" />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Decorative Quote */}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <Quote className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                
-                {/* Background Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl transform rotate-2"></div>
-              </article>
+            <div className="max-w-7xl mx-auto">
+              {/* Section Header */}
+              <div className="text-center mb-20">
+                <h2 id="testimonials-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                  Client Success Stories
+                </h2>
+                <div className="w-24 h-1 bg-primary mx-auto"></div>
+              </div>
               
-              {/* Testimonial 2 */}
-              <article className="relative">
-                <div className="relative z-10 bg-background rounded-2xl p-8 shadow-xl border border-border/50">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
-                        SM
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Sarah M.</h3>
-                        <p className="text-sm text-muted-foreground">Business Analyst</p>
-                      </div>
-                    </div>
-                    
-                    <blockquote className="text-foreground text-lg leading-relaxed">
-                      "Fast, reliable, and professional. They made our data process simple and effective."
-                    </blockquote>
-                    
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-secondary text-secondary" />
-                      ))}
+              {/* Testimonials Layout */}
+              <div className="space-y-16">
+                {/* First Testimonial - Left Aligned */}
+                <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                  <div className="lg:col-span-7 space-y-8">
+                    <div className="relative">
+                      <Quote className="absolute -top-4 -left-4 h-12 w-12 text-primary/20" />
+                      <blockquote className="text-2xl lg:text-3xl font-light text-foreground leading-relaxed pl-8">
+                        Prestige DataOps helped us turn raw data into valuable insights that improved our decision-making.
+                      </blockquote>
                     </div>
                   </div>
                   
-                  {/* Decorative Quote */}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
-                    <Quote className="h-4 w-4 text-white" />
+                  <div className="lg:col-span-5">
+                    <div className="flex items-center space-x-6 lg:justify-end">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-xl">JD</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground">John D.</h3>
+                        <p className="text-muted-foreground">Operations Manager</p>
+                        <div className="flex space-x-1 mt-2">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </article>
+                
+                {/* Divider */}
+                <div className="flex justify-center">
+                  <div className="w-32 h-px bg-border"></div>
                 </div>
                 
-                {/* Background Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl transform -rotate-2"></div>
-              </article>
-            </div>
-            
-            {/* Trust Indicators */}
-            <div className="mt-16 text-center">
-              <p className="text-sm text-muted-foreground mb-8">Trusted by companies worldwide</p>
-              <div className="flex justify-center items-center space-x-8 opacity-60">
-                <div className="text-2xl font-bold text-foreground">Enterprise</div>
-                <div className="w-px h-8 bg-border"></div>
-                <div className="text-2xl font-bold text-foreground">Growth</div>
-                <div className="w-px h-8 bg-border"></div>
-                <div className="text-2xl font-bold text-foreground">Scale</div>
+                {/* Second Testimonial - Right Aligned */}
+                <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                  <div className="lg:col-span-5 order-2 lg:order-1">
+                    <div className="flex items-center space-x-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-xl">SM</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground">Sarah M.</h3>
+                        <p className="text-muted-foreground">Business Analyst</p>
+                        <div className="flex space-x-1 mt-2">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="lg:col-span-7 space-y-8 order-1 lg:order-2">
+                    <div className="relative lg:text-right">
+                      <Quote className="absolute -top-4 -right-4 h-12 w-12 text-secondary/20 transform scale-x-[-1]" />
+                      <blockquote className="text-2xl lg:text-3xl font-light text-foreground leading-relaxed pr-8">
+                        Fast, reliable, and professional. They made our data process simple and effective.
+                      </blockquote>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
