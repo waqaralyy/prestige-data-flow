@@ -89,31 +89,87 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-background" aria-labelledby="services-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center space-y-4 mb-16">
-              <h2 id="services-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
-                Our Core Services
+        <section className="py-24 bg-gradient-to-br from-background via-background to-muted/30 relative overflow-hidden" aria-labelledby="services-heading">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-10 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <header className="text-center space-y-8 mb-20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm font-medium border border-primary/20 backdrop-blur-sm">
+                <Zap className="h-4 w-4" />
+                Premium Solutions
+              </div>
+              <h2 id="services-heading" className="text-4xl lg:text-6xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                  Our Core
+                </span>
+                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  Services
+                </span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We provide comprehensive data solutions to help your business thrive in today's data-driven world.
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                We provide comprehensive data solutions to help your business thrive in today's data-driven world with cutting-edge technology and expert guidance.
               </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
             </header>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
-                <article key={index}>
-                  <Card className="border-0 shadow-medium hover:shadow-large transition-shadow duration-300 h-full">
-                    <CardContent className="p-8 text-center space-y-4">
-                      <div className="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
-                        <service.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                <article 
+                  key={index} 
+                  className="group animate-fade-in" 
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 h-full bg-gradient-to-br from-card/90 to-card backdrop-blur-sm hover:scale-105 group overflow-hidden relative">
+                    {/* Card decoration */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:from-primary/20 transition-all duration-500"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-secondary/10 to-transparent rounded-tr-full group-hover:from-secondary/20 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-accent/5 group-hover:to-accent/10 transition-all duration-500"></div>
+                    
+                    <CardContent className="p-8 text-center space-y-6 relative z-10">
+                      <div className="mx-auto w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                        <service.icon className="h-10 w-10 text-white" aria-hidden="true" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                      
+                      <div className="space-y-4">
+                        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {service.title}
+                        </h3>
+                        <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full opacity-50 group-hover:opacity-100 group-hover:w-20 transition-all duration-300"></div>
+                        <p className="text-muted-foreground leading-relaxed text-base">
+                          {service.description}
+                        </p>
+                      </div>
+                      
+                      <div className="pt-4">
+                        <Button 
+                          variant="ghost" 
+                          className="text-primary hover:text-primary-foreground hover:bg-primary border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-105 group-hover:shadow-lg"
+                        >
+                          Learn More
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </article>
               ))}
+            </div>
+            
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <Button 
+                asChild 
+                size="lg" 
+                className="text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-10 py-4 text-lg"
+                style={{ backgroundColor: '#0A1F44' }}
+              >
+                <Link to="/services" className="flex items-center gap-2">
+                  View All Services
+                  <TrendingUp className="h-5 w-5" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
