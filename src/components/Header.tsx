@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">PD</span>
             </div>
             <span className="font-display font-semibold text-xl text-foreground">

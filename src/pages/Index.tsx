@@ -39,14 +39,14 @@ const Index = () => {
         <Header />
         
         {/* Hero Section */}
-        <section className="relative pt-16 bg-gradient-hero overflow-hidden">
+        <section className="relative pt-16 bg-muted overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <header className="space-y-8">
                 <div className="space-y-4">
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                     Empowering Your
-                    <span className="bg-gradient-primary bg-clip-text text-transparent"> Data Operations</span>{" "}
+                    <span className="text-primary"> Data Operations</span>{" "}
                     for a Smarter Business
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed">
@@ -58,7 +58,7 @@ const Index = () => {
                   <Button 
                     asChild 
                     size="lg" 
-                    className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6"
+                    className="bg-primary hover:bg-primary text-lg px-8 py-6"
                   >
                     <Link to="/contact">Get Started Today</Link>
                   </Button>
@@ -80,7 +80,7 @@ const Index = () => {
                   className="w-full h-auto rounded-2xl shadow-large"
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 bg-background/20 rounded-2xl"></div>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Index = () => {
                 <article key={index}>
                   <Card className="border-0 shadow-medium hover:shadow-large transition-shadow duration-300 h-full">
                     <CardContent className="p-8 text-center space-y-4">
-                      <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                      <div className="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
                         <service.icon className="h-8 w-8 text-white" aria-hidden="true" />
                       </div>
                       <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
@@ -144,7 +144,7 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <Button asChild className="bg-gradient-primary hover:opacity-90">
+                <Button asChild className="bg-primary hover:bg-primary">
                   <Link to="/about">Learn More About Us</Link>
                 </Button>
               </article>
@@ -196,7 +196,7 @@ const Index = () => {
               <article>
                 <Card className="border-0 shadow-medium hover:shadow-large transition-all duration-300 h-full relative">
                   <CardContent className="p-8 text-center space-y-6">
-                    <div className="mx-auto w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center">
+                    <div className="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
                       <Shield className="h-8 w-8 text-white" aria-hidden="true" />
                     </div>
                     <div className="space-y-2">
@@ -217,7 +217,7 @@ const Index = () => {
                         <span className="text-muted-foreground">Standard support</span>
                       </div>
                     </div>
-                    <Button asChild className="w-full bg-gradient-primary hover:opacity-90">
+                    <Button asChild className="w-full bg-primary hover:bg-primary">
                       <Link to="/contact">Get Started</Link>
                     </Button>
                   </CardContent>
@@ -234,7 +234,7 @@ const Index = () => {
                     </div>
                   </div>
                   <CardContent className="p-8 text-center space-y-6">
-                    <div className="mx-auto w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl flex items-center justify-center">
+                    <div className="mx-auto w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center">
                       <TrendingUp className="h-8 w-8 text-white" aria-hidden="true" />
                     </div>
                     <div className="space-y-2">
@@ -259,7 +259,7 @@ const Index = () => {
                         <span className="text-muted-foreground">Extended support</span>
                       </div>
                     </div>
-                    <Button asChild className="w-full bg-gradient-to-r from-secondary to-secondary/90 hover:opacity-90">
+                    <Button asChild className="w-full bg-secondary hover:bg-secondary">
                       <Link to="/contact">Get Started</Link>
                     </Button>
                   </CardContent>
@@ -270,7 +270,7 @@ const Index = () => {
               <article>
                 <Card className="border-0 shadow-medium hover:shadow-large transition-all duration-300 h-full relative">
                   <CardContent className="p-8 text-center space-y-6">
-                    <div className="mx-auto w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl flex items-center justify-center">
+                    <div className="mx-auto w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
                       <Star className="h-8 w-8 text-white" aria-hidden="true" />
                     </div>
                     <div className="space-y-2">
@@ -295,7 +295,7 @@ const Index = () => {
                         <span className="text-muted-foreground">Ongoing optimization</span>
                       </div>
                     </div>
-                    <Button asChild className="w-full bg-gradient-to-r from-accent to-accent/90 hover:opacity-90">
+                    <Button asChild className="w-full bg-accent hover:bg-accent">
                       <Link to="/contact">Get Started</Link>
                     </Button>
                   </CardContent>
@@ -306,7 +306,7 @@ const Index = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-white" aria-labelledby="cta-heading">
+        <section className="py-20 bg-primary text-white" aria-labelledby="cta-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 id="cta-heading" className="text-3xl lg:text-4xl font-bold">

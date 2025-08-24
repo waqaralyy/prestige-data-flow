@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center">
+              <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold text-sm">PD</span>
               </div>
               <span className="font-display font-semibold text-xl">

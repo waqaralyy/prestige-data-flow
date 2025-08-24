@@ -67,10 +67,6 @@ export default {
 				'display': ['Inter', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-hero': 'var(--gradient-hero)',
-			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'medium': 'var(--shadow-medium)',

@@ -66,7 +66,7 @@ const Contact = () => {
               <header className="text-center space-y-6 max-w-4xl mx-auto">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
                   Get In
-                  <span className="bg-gradient-primary bg-clip-text text-transparent"> Touch</span>
+                  <span className="text-primary"> Touch</span>
                 </h1>
                 <p className="text-xl text-white/90 leading-relaxed">
                   Ready to transform your business with data? Let's discuss your project and 
@@ -134,7 +134,7 @@ const Contact = () => {
 
                           <Button 
                             type="submit" 
-                            className="w-full bg-gradient-primary hover:opacity-90 text-lg py-6"
+                            className="w-full bg-primary hover:bg-primary text-lg py-6"
                           >
                             Send Message
                           </Button>

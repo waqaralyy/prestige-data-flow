@@ -53,12 +53,12 @@ const About = () => {
         <Header />
         
         {/* Hero Section */}
-        <section className="pt-24 pb-16 bg-gradient-hero">
+        <section className="pt-24 pb-16 bg-muted">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <header className="text-center space-y-6 max-w-4xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
                 About
-                <span className="bg-gradient-primary bg-clip-text text-transparent"> Prestige Dataops</span>
+                <span className="text-primary"> Prestige Dataops</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 For over a decade, we've been at the forefront of data innovation, helping businesses 
@@ -135,7 +135,7 @@ const About = () => {
             {values.map((value, index) => (
               <Card key={index} className="border-0 shadow-medium hover:shadow-large transition-shadow duration-300 text-center">
                 <CardContent className="p-8 space-y-4">
-                  <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                  <div className="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
                     <value.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">{value.title}</h3>
@@ -148,7 +148,7 @@ const About = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-hero" aria-labelledby="faq-heading">
+      <section className="py-20 bg-muted" aria-labelledby="faq-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center space-y-6 mb-20">
             <h2 id="faq-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
@@ -157,7 +157,7 @@ const About = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Quick answers to common questions about our services and process.
             </p>
-            <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </header>
           
           <div className="max-w-4xl mx-auto">
@@ -165,7 +165,7 @@ const About = () => {
               <AccordionItem value="item-1" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-foreground font-semibold text-sm">01</span>
                     </div>
                     <span className="font-semibold text-foreground text-lg">What is PrestigeDataOps?</span>
@@ -181,7 +181,7 @@ const About = () => {
               <AccordionItem value="item-2" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-foreground font-semibold text-sm">02</span>
                     </div>
                     <span className="font-semibold text-foreground text-lg">What services do you offer?</span>
@@ -208,7 +208,7 @@ const About = () => {
               <AccordionItem value="item-3" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-foreground font-semibold text-sm">03</span>
                     </div>
                     <span className="font-semibold text-foreground text-lg">Who are your services for?</span>
@@ -224,7 +224,7 @@ const About = () => {
               <AccordionItem value="item-4" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-foreground font-semibold text-sm">04</span>
                     </div>
                     <span className="font-semibold text-foreground text-lg">How long does implementation take?</span>
@@ -240,7 +240,7 @@ const About = () => {
               <AccordionItem value="item-5" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-foreground font-semibold text-sm">05</span>
                     </div>
                     <span className="font-semibold text-foreground text-lg">Do you provide ongoing support?</span>
@@ -256,7 +256,7 @@ const About = () => {
               <AccordionItem value="item-6" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
                 <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-foreground font-semibold text-sm">06</span>
                     </div>
                     <span className="font-semibold text-foreground text-lg">Can I upgrade later?</span>

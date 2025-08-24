@@ -89,12 +89,12 @@ const Services = () => {
         <Header />
         
         {/* Hero Section */}
-        <section className="pt-24 pb-16 bg-gradient-hero">
+        <section className="pt-24 pb-16 bg-muted">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <header className="text-center space-y-6 max-w-4xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
                 Comprehensive
-                <span className="bg-gradient-primary bg-clip-text text-transparent"> Data Solutions</span>
+                <span className="text-primary"> Data Solutions</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 From analytics to automation, we provide end-to-end data services that transform 
@@ -118,7 +118,7 @@ const Services = () => {
                       {/* Content Side */}
                       <div className="flex-1 space-y-6">
                         <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                             <service.icon className="h-6 w-6 text-white" aria-hidden="true" />
                           </div>
                           <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{service.title}</h3>
@@ -181,7 +181,7 @@ const Services = () => {
                         {index + 1}
                       </div>
                       
-                      <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center relative shadow-lg">
+                      <div className="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center relative shadow-lg">
                         <step.icon className="h-8 w-8 text-white" aria-hidden="true" />
                         
                         {/* Step number for desktop */}
@@ -194,7 +194,7 @@ const Services = () => {
                       {index < processSteps.length - 1 && (
                         <>
                           {/* Horizontal line */}
-                          <div className="hidden lg:block absolute top-8 right-0 w-full h-px bg-gradient-to-r from-primary/30 to-primary/10 transform translate-x-8"></div>
+                          <div className="hidden lg:block absolute top-8 right-0 w-full h-px bg-primary/30 transform translate-x-8"></div>
                           
                           {/* Arrow */}
                           <div className="hidden lg:block absolute top-7 right-2 w-3 h-3 border-r-2 border-t-2 border-primary/40 transform rotate-45 translate-x-8"></div>
@@ -212,7 +212,7 @@ const Services = () => {
         </main>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-white" aria-labelledby="cta-heading">
+        <section className="py-20 bg-primary text-white" aria-labelledby="cta-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 id="cta-heading" className="text-3xl lg:text-4xl font-bold">
