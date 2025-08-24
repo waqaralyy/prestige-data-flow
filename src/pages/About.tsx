@@ -94,74 +94,103 @@ const About = () => {
 
 
       {/* Mission Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-background via-background to-muted/30 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm font-medium border border-primary/20 backdrop-blur-sm">
                   <Globe className="h-4 w-4" />
                   Our Mission
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                  Democratizing Data Science for
-                  <span className="text-primary"> Everyone</span>
+                <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                    Democratizing Data Science for
+                  </span>
+                  <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-pulse">
+                    Everyone
+                  </span>
                 </h2>
               </div>
               
               <div className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We believe that every organization, regardless of size, should have access to 
-                  enterprise-grade data analytics and intelligence. Our mission is to democratize 
-                  data science and make advanced analytics accessible to businesses worldwide.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through our innovative solutions and expert guidance, we help organizations 
-                  unlock the full potential of their data, driving growth, efficiency, and 
-                  competitive advantage in an increasingly data-driven world.
-                </p>
+                <div className="relative">
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary to-secondary rounded-full opacity-50"></div>
+                  <p className="text-lg text-muted-foreground leading-relaxed pl-6">
+                    We believe that every organization, regardless of size, should have access to 
+                    enterprise-grade data analytics and intelligence. Our mission is to democratize 
+                    data science and make advanced analytics accessible to businesses worldwide.
+                  </p>
+                </div>
+                <div className="relative">
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-accent rounded-full opacity-50"></div>
+                  <p className="text-lg text-muted-foreground leading-relaxed pl-6">
+                    Through our innovative solutions and expert guidance, we help organizations 
+                    unlock the full potential of their data, driving growth, efficiency, and 
+                    competitive advantage in an increasingly data-driven world.
+                  </p>
+                </div>
               </div>
               
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                <Link to="/services" className="flex items-center gap-2">
-                  Explore Our Solutions
-                  <TrendingUp className="h-4 w-4" />
-                </Link>
-              </Button>
+              <div className="pt-4">
+                <Button className="bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-secondary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-8 py-3 text-lg">
+                  <Link to="/services" className="flex items-center gap-2">
+                    Explore Our Solutions
+                    <TrendingUp className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
             
-            <div className="space-y-8">
-              <Card className="border shadow-large bg-card">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-semibold text-foreground mb-6">What Sets Us Apart</h3>
+            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Card className="border-0 shadow-2xl bg-gradient-to-br from-card/80 to-card backdrop-blur-sm hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] group overflow-hidden relative">
+                {/* Card decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-secondary/10 to-transparent rounded-tr-full"></div>
+                
+                <CardContent className="p-8 relative z-10">
+                  <div className="flex items-center gap-3 mb-8">
+                    <div className="p-2 bg-gradient-to-r from-primary to-secondary rounded-xl">
+                      <Award className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                      What Sets Us Apart
+                    </h3>
+                  </div>
+                  
                   <div className="space-y-6">
-                    <div className="flex items-start space-x-4 p-4 rounded-xl bg-muted border">
-                      <div className="p-2 bg-primary rounded-lg">
+                    <div className="flex items-start space-x-4 p-5 rounded-2xl bg-gradient-to-r from-muted/50 to-muted/30 border border-primary/10 hover:border-primary/30 transition-all duration-300 group/item hover:scale-105">
+                      <div className="p-3 bg-gradient-to-r from-primary to-primary/80 rounded-xl shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:rotate-6">
                         <Clock className="h-5 w-5 text-primary-foreground" />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">Rapid Implementation</h4>
-                        <p className="text-muted-foreground">Get up and running with our solutions in weeks, not months.</p>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-2 group-hover/item:text-primary transition-colors duration-300">Rapid Implementation</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">Get up and running with our solutions in weeks, not months.</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4 p-4 rounded-xl bg-muted border">
-                      <div className="p-2 bg-secondary rounded-lg">
+                    <div className="flex items-start space-x-4 p-5 rounded-2xl bg-gradient-to-r from-muted/50 to-muted/30 border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group/item hover:scale-105">
+                      <div className="p-3 bg-gradient-to-r from-secondary to-secondary/80 rounded-xl shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:rotate-6">
                         <TrendingUp className="h-5 w-5 text-secondary-foreground" />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">Proven ROI</h4>
-                        <p className="text-muted-foreground">Our clients typically see 3x return on investment within the first year.</p>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-2 group-hover/item:text-secondary transition-colors duration-300">Proven ROI</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">Our clients typically see 3x return on investment within the first year.</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4 p-4 rounded-xl bg-muted border">
-                      <div className="p-2 bg-accent rounded-lg">
+                    <div className="flex items-start space-x-4 p-5 rounded-2xl bg-gradient-to-r from-muted/50 to-muted/30 border border-accent/10 hover:border-accent/30 transition-all duration-300 group/item hover:scale-105">
+                      <div className="p-3 bg-gradient-to-r from-accent to-accent/80 rounded-xl shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:rotate-6">
                         <Users className="h-5 w-5 text-accent-foreground" />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">Expert Team</h4>
-                        <p className="text-muted-foreground">Work with certified data scientists and industry experts.</p>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-2 group-hover/item:text-accent transition-colors duration-300">Expert Team</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">Work with certified data scientists and industry experts.</p>
                       </div>
                     </div>
                   </div>
