@@ -77,8 +77,8 @@ const Index = () => {
               
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/1d554891-7f02-43b4-8746-62bc6694f0c2.png" 
-                  alt="Modern data analytics interface with interactive dashboards, charts, and real-time data visualization tools for business intelligence" 
+                  src="/lovable-uploads/e4c94894-7927-4204-b280-4e3ed951d269.png" 
+                  alt="Professional data analytics dashboard displayed on laptop showing comprehensive business intelligence charts, graphs, and performance metrics" 
                   className="w-full h-auto rounded-2xl shadow-large"
                   loading="eager"
                 />
