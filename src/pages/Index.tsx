@@ -411,8 +411,7 @@ const Index = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  variant="secondary"
-                  className="text-lg px-8 py-6"
+                  className="text-lg px-8 py-6 bg-accent hover:bg-accent text-accent-foreground"
                 >
                   <Link to="/contact">Schedule a Consultation</Link>
                 </Button>
