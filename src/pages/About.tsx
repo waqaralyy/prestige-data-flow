@@ -138,7 +138,10 @@ const About = () => {
               </div>
               
               <div className="pt-4">
-                <Button className="bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-secondary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-8 py-3 text-lg">
+                <Button 
+                  className="text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-8 py-3 text-lg"
+                  style={{ backgroundColor: '#0A1F44' }}
+                >
                   <Link to="/services" className="flex items-center gap-2">
                     Explore Our Solutions
                     <TrendingUp className="h-4 w-4" />
