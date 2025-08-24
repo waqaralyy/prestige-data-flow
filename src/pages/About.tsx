@@ -40,12 +40,6 @@ const About = () => {
     }
   ];
 
-  const stats = [
-    { number: "10+", label: "Years Experience" },
-    { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Enterprise Clients" },
-    { number: "99%", label: "Client Satisfaction" }
-  ];
 
 
   return (
@@ -97,21 +91,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="p-8 rounded-2xl bg-card border border-border hover:shadow-large transition-all duration-300 group-hover:scale-105">
-                    <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.number}</div>
-                    <div className="text-muted-foreground font-medium">{stat.label}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
 
       {/* Mission Section */}
