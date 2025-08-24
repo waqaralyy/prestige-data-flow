@@ -14,7 +14,9 @@ import {
   Clock,
   Target,
   Users,
-  Lightbulb
+  Lightbulb,
+  DollarSign,
+  Scaling
 } from "lucide-react";
 
 const Services = () => {
@@ -74,6 +76,27 @@ const Services = () => {
       icon: Clock,
       title: "Optimization",
       description: "Continuously monitor and refine solutions for maximum performance and ROI."
+    }
+  ];
+
+  const clientBenefits = [
+    {
+      icon: DollarSign,
+      title: "Save Time & Costs",
+      description: "Automate and streamline your data processes.",
+      highlight: "Reduce operational costs by up to 40%"
+    },
+    {
+      icon: Brain,
+      title: "Smarter Decisions",
+      description: "Get clear, actionable insights from your data.",
+      highlight: "Make data-driven decisions with confidence"
+    },
+    {
+      icon: TrendingUp,
+      title: "Scalable Solutions",
+      description: "Our services grow with your business needs.",
+      highlight: "Scale from startup to enterprise seamlessly"
     }
   ];
 
@@ -156,6 +179,39 @@ const Services = () => {
                     </article>
                   );
                 })}
+              </div>
+            </div>
+          </section>
+
+          {/* Client Benefits Section */}
+          <section className="py-20 bg-background" aria-labelledby="benefits-heading">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <header className="text-center space-y-4 mb-16">
+                <h2 id="benefits-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
+                  Why Choose Our Data Solutions?
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Transform your business with proven benefits that deliver real value and measurable results.
+                </p>
+              </header>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {clientBenefits.map((benefit, index) => (
+                  <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card border border-border">
+                    <CardHeader className="text-center space-y-4">
+                      <div className="mx-auto w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                        <benefit.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                      </div>
+                      <CardTitle className="text-xl font-bold text-foreground">{benefit.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center space-y-4">
+                      <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                      <div className="inline-block bg-secondary/50 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium">
+                        {benefit.highlight}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </section>
