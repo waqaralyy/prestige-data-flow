@@ -10,13 +10,13 @@ All colors MUST be HSL.
   :root {
     /* Light Gray backgrounds (#F5F7FA) */
     --background: 220 14% 97%;
-    --foreground: 220 26% 17%;
+    --foreground: 220 28% 17%;
 
     --card: 220 14% 97%;
-    --card-foreground: 220 26% 17%;
+    --card-foreground: 220 28% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 17%;
+    --popover-foreground: 220 28% 17%;
 
     /* Dark Navy Blue for primary elements (#0A1F44) */
     --primary: 220 83% 16%;
@@ -28,11 +28,11 @@ All colors MUST be HSL.
 
     /* Light Gray for muted areas (#F5F7FA) */
     --muted: 220 14% 97%;
-    --muted-foreground: 220 26% 45%;
+    --muted-foreground: 220 28% 45%;
 
     /* Vibrant Gold/Orange for accents (#F59E0B) */
     --accent: 43 96% 51%;
-    --accent-foreground: 220 26% 17%;
+    --accent-foreground: 220 28% 17%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -85,7 +85,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 95%;
 
     --muted: 220 83% 14%;
-    --muted-foreground: 220 26% 65%;
+    --muted-foreground: 220 28% 65%;
 
     /* Vibrant Gold/Orange for accents in dark mode (#F59E0B) */
     --accent: 43 96% 51%;
