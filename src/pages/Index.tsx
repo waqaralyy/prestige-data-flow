@@ -45,12 +45,14 @@ const Index = () => {
               <header className="space-y-8">
                 <div className="space-y-4">
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                    Empowering Your
-                    <span className="text-primary"> Data Operations</span>{" "}
-                    for a Smarter Business
+                    Transform Your Data Into{" "}
+                    <span className="text-primary">Smart Decisions</span>
                   </h1>
+                  <div className="text-2xl sm:text-3xl font-semibold text-secondary mb-4">
+                    Prestige DataOps: Turning Complex Data Into Clear Insights
+                  </div>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    At Prestige DataOps, we deliver seamless data engineering and automation solutions to accelerate your business growth.
+                    We help businesses unlock the full potential of their data with advanced analytics and seamless integration
                   </p>
                 </div>
                 
