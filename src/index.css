@@ -41,24 +41,12 @@ All colors MUST be HSL.
     --input: 220 14% 91%;
     --ring: 220 83% 16%;
 
-    /* Enhanced design tokens with sophisticated shadows and gradients */
-    --shadow-soft: 0 4px 6px -1px hsl(220 83% 16% / 0.1), 0 2px 4px -1px hsl(220 83% 16% / 0.06);
-    --shadow-medium: 0 10px 15px -3px hsl(220 83% 16% / 0.1), 0 4px 6px -2px hsl(220 83% 16% / 0.05);
-    --shadow-large: 0 25px 50px -12px hsl(220 83% 16% / 0.25), 0 0 0 1px hsl(220 83% 16% / 0.05);
-    --shadow-elegant: 0 20px 25px -5px hsl(220 83% 16% / 0.1), 0 10px 10px -5px hsl(220 83% 16% / 0.04);
-    --shadow-glow: 0 0 40px hsl(223 93% 61% / 0.15);
-    
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 83% 16%), hsl(220 83% 20%));
-    --gradient-secondary: linear-gradient(135deg, hsl(223 93% 61%), hsl(223 93% 65%));
-    --gradient-accent: linear-gradient(135deg, hsl(43 96% 51%), hsl(43 96% 55%));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 14% 97%), hsl(220 14% 95%));
-    
-    /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Custom design tokens with solid colors */
+    --shadow-soft: 0 4px 6px -1px hsl(220 83% 16% / 0.1);
+    --shadow-medium: 0 10px 15px -3px hsl(220 83% 16% / 0.1);
+    --shadow-large: 0 25px 50px -12px hsl(220 83% 16% / 0.25);
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -110,11 +98,9 @@ All colors MUST be HSL.
     --input: 220 83% 18%;
     --ring: 223 93% 61%;
 
-    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.15);
-    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.15);
-    --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(0 0% 0% / 0.1);
-    --shadow-elegant: 0 20px 25px -5px hsl(0 0% 0% / 0.25), 0 10px 10px -5px hsl(0 0% 0% / 0.15);
-    --shadow-glow: 0 0 40px hsl(223 93% 61% / 0.2);
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.3);
+    --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
     --sidebar-background: 220 83% 10%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 223 93% 61%;
@@ -132,61 +118,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-body;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Professional heading styles */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold tracking-tight;
-    letter-spacing: -0.025em;
-  }
-
-  h1 {
-    @apply text-4xl sm:text-5xl lg:text-6xl leading-none;
-    letter-spacing: -0.04em;
-  }
-
-  h2 {
-    @apply text-3xl lg:text-4xl leading-tight;
-    letter-spacing: -0.03em;
-  }
-
-  h3 {
-    @apply text-xl lg:text-2xl leading-snug;
-    letter-spacing: -0.025em;
-  }
-
-  /* Smooth scroll behavior */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Focus states for accessibility */
-  button:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
-  }
-
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-muted;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-border rounded-lg;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/30;
+    @apply bg-background text-foreground;
   }
 }
