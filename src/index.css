@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light Gray backgrounds */
-    --background: 214 32% 97%;
-    --foreground: 218 30% 18%;
+    /* Light Gray backgrounds (#F5F7FA) */
+    --background: 220 14% 97%;
+    --foreground: 220 26% 17%;
 
-    --card: 214 32% 97%;
-    --card-foreground: 218 30% 18%;
+    --card: 220 14% 97%;
+    --card-foreground: 220 26% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 30% 18%;
+    --popover-foreground: 220 26% 17%;
 
-    /* Dark Navy Blue for primary elements */
-    --primary: 218 75% 16%;
+    /* Dark Navy Blue for primary elements (#0A1F44) */
+    --primary: 220 83% 16%;
     --primary-foreground: 0 0% 100%;
 
-    /* Bright Blue for secondary elements */
-    --secondary: 220 93% 60%;
+    /* Bright Blue for secondary elements (#3A6FF8) */
+    --secondary: 223 93% 61%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Light Gray for muted areas */
-    --muted: 214 32% 97%;
-    --muted-foreground: 218 30% 45%;
+    /* Light Gray for muted areas (#F5F7FA) */
+    --muted: 220 14% 97%;
+    --muted-foreground: 220 26% 45%;
 
-    /* Vibrant Gold/Orange for accents */
-    --accent: 43 96% 50%;
-    --accent-foreground: 218 30% 18%;
+    /* Vibrant Gold/Orange for accents (#F59E0B) */
+    --accent: 43 96% 51%;
+    --accent-foreground: 220 26% 17%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 218 75% 16%;
+    --border: 220 14% 91%;
+    --input: 220 14% 91%;
+    --ring: 220 83% 16%;
 
     /* Custom design tokens with solid colors */
-    --shadow-soft: 0 4px 6px -1px hsl(218 75% 16% / 0.1);
-    --shadow-medium: 0 10px 15px -3px hsl(218 75% 16% / 0.1);
-    --shadow-large: 0 25px 50px -12px hsl(218 75% 16% / 0.25);
+    --shadow-soft: 0 4px 6px -1px hsl(220 83% 16% / 0.1);
+    --shadow-medium: 0 10px 15px -3px hsl(220 83% 16% / 0.1);
+    --shadow-large: 0 25px 50px -12px hsl(220 83% 16% / 0.25);
 
     --radius: 0.5rem;
 
@@ -67,48 +67,48 @@ All colors MUST be HSL.
 
   .dark {
     /* Dark Navy Blue backgrounds for dark mode */
-    --background: 218 75% 8%;
+    --background: 220 83% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 218 75% 12%;
+    --card: 220 83% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 218 75% 12%;
+    --popover: 220 83% 12%;
     --popover-foreground: 0 0% 95%;
 
-    /* Bright Blue for primary in dark mode */
-    --primary: 220 93% 60%;
-    --primary-foreground: 218 75% 8%;
+    /* Bright Blue for primary in dark mode (#3A6FF8) */
+    --primary: 223 93% 61%;
+    --primary-foreground: 220 83% 8%;
 
     /* Dark Navy Blue for secondary in dark mode */
-    --secondary: 218 75% 20%;
+    --secondary: 220 83% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 218 75% 14%;
-    --muted-foreground: 218 30% 65%;
+    --muted: 220 83% 14%;
+    --muted-foreground: 220 26% 65%;
 
-    /* Vibrant Gold/Orange for accents in dark mode */
-    --accent: 43 96% 55%;
-    --accent-foreground: 218 75% 8%;
+    /* Vibrant Gold/Orange for accents in dark mode (#F59E0B) */
+    --accent: 43 96% 51%;
+    --accent-foreground: 220 83% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 218 75% 18%;
-    --input: 218 75% 18%;
-    --ring: 220 93% 60%;
+    --border: 220 83% 18%;
+    --input: 220 83% 18%;
+    --ring: 223 93% 61%;
 
     --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.3);
     --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
-    --sidebar-background: 218 75% 10%;
+    --sidebar-background: 220 83% 10%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 220 93% 60%;
-    --sidebar-primary-foreground: 218 75% 8%;
-    --sidebar-accent: 218 75% 15%;
+    --sidebar-primary: 223 93% 61%;
+    --sidebar-primary-foreground: 220 83% 8%;
+    --sidebar-accent: 220 83% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 218 75% 18%;
-    --sidebar-ring: 220 93% 60%;
+    --sidebar-border: 220 83% 18%;
+    --sidebar-ring: 223 93% 61%;
   }
 }
 
