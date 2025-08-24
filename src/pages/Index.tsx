@@ -391,17 +391,6 @@ const Index = () => {
               {/* Trust Indicators */}
               <div className="mt-16 text-center">
                 <p className="text-muted-foreground mb-8">Trusted by 100+ companies worldwide</p>
-                <div className="flex justify-center items-center space-x-8 opacity-60">
-                  <div className="w-24 h-12 bg-muted rounded-lg flex items-center justify-center">
-                    <span className="text-sm font-semibold">CORP A</span>
-                  </div>
-                  <div className="w-24 h-12 bg-muted rounded-lg flex items-center justify-center">
-                    <span className="text-sm font-semibold">CORP B</span>
-                  </div>
-                  <div className="w-24 h-12 bg-muted rounded-lg flex items-center justify-center">
-                    <span className="text-sm font-semibold">CORP C</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
