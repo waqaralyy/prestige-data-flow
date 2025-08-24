@@ -157,7 +157,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold flex items-center space-x-2">
-                          <Phone className="h-5 w-5 text-accent flex-shrink-0" aria-hidden="true" />
+                          <Phone className="h-5 w-5 text-secondary flex-shrink-0" aria-hidden="true" />
                           <span>Call Us</span>
                         </h3>
                         <p className="text-lg">+1 (555) 123-4567</p>
