@@ -11,18 +11,18 @@ const Index = () => {
   const services = [
     {
       icon: BarChart3,
-      title: "Data Analytics",
-      description: "Transform raw data into actionable insights with advanced analytics and visualization tools."
+      title: "Data Pipeline Automation",
+      description: "Automate your data pipelines with intelligent orchestration and seamless workflow management."
     },
     {
       icon: Brain,
-      title: "Business Intelligence",
-      description: "Make informed decisions with comprehensive BI solutions and real-time dashboards."
+      title: "Data Integration & Orchestration",
+      description: "Seamlessly connect and orchestrate data from multiple sources with unified integration solutions."
     },
     {
       icon: Zap,
-      title: "Process Automation",
-      description: "Streamline operations and boost efficiency with intelligent automation solutions."
+      title: "Monitoring & Quality Assurance",
+      description: "Ensure data quality and system reliability with comprehensive monitoring and validation tools."
     }
   ];
 
