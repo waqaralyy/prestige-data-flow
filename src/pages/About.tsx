@@ -148,127 +148,161 @@ const About = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-muted" aria-labelledby="faq-heading">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-background relative overflow-hidden" aria-labelledby="faq-heading">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <header className="text-center space-y-6 mb-20">
+            <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-4">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">?</span>
+              </div>
+            </div>
             <h2 id="faq-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Quick answers to common questions about our services and process.
+              Get instant answers to the most common questions about our data operations services and implementation process.
             </p>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </header>
           
           <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-6">
-              <AccordionItem value="item-1" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-gradient-to-r from-card to-card/80 border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group backdrop-blur-sm">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 group-hover:bg-muted/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">01</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-primary-foreground font-bold text-sm">01</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">What is PrestigeDataOps?</span>
+                    <span className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors duration-300">What is PrestigeDataOps?</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
-                    PrestigeDataOps provides data operations and integration services to help businesses streamline workflows, improve performance, and automate processes.
+                <AccordionContent className="px-8 pb-8 text-muted-foreground leading-relaxed text-base animate-accordion-down">
+                  <div className="pl-16 pt-2">
+                    <div className="p-6 bg-muted/20 rounded-xl border-l-4 border-primary">
+                      PrestigeDataOps provides comprehensive data operations and integration services to help businesses streamline workflows, improve performance, and automate processes through cutting-edge technology solutions.
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-2" className="bg-gradient-to-r from-card to-card/80 border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group backdrop-blur-sm">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 group-hover:bg-muted/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">02</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-secondary-foreground font-bold text-sm">02</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">What services do you offer?</span>
+                    <span className="font-semibold text-foreground text-lg group-hover:text-secondary transition-colors duration-300">What services do you offer?</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14 space-y-4">
-                    <p>We offer three comprehensive service packages:</p>
-                    <div className="space-y-3">
-                      <div className="p-4 bg-muted/30 rounded-xl border-l-4 border-primary">
-                        <p><strong className="text-primary">Basic Trim ($3,000)</strong> – Core setup, essential integrations, and standard support.</p>
+                <AccordionContent className="px-8 pb-8 text-muted-foreground leading-relaxed text-base animate-accordion-down">
+                  <div className="pl-16 pt-2 space-y-4">
+                    <p className="text-foreground font-medium">We offer three comprehensive service packages tailored to your needs:</p>
+                    <div className="grid gap-4">
+                      <div className="p-5 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border-l-4 border-primary hover:shadow-medium transition-shadow duration-300">
+                        <p><strong className="text-primary text-lg">Basic Trim ($3,000)</strong></p>
+                        <p className="text-muted-foreground mt-1">Core setup, essential integrations, and standard support to get you started.</p>
                       </div>
-                      <div className="p-4 bg-muted/30 rounded-xl border-l-4 border-secondary">
-                        <p><strong className="text-secondary">Standard Trim ($5,000)</strong> – Includes Basic, plus advanced integrations, performance optimization, and extended support.</p>
+                      <div className="p-5 bg-gradient-to-r from-secondary/5 to-secondary/10 rounded-xl border-l-4 border-secondary hover:shadow-medium transition-shadow duration-300">
+                        <p><strong className="text-secondary text-lg">Standard Trim ($5,000)</strong></p>
+                        <p className="text-muted-foreground mt-1">Everything in Basic, plus advanced integrations, performance optimization, and extended support.</p>
                       </div>
-                      <div className="p-4 bg-muted/30 rounded-xl border-l-4 border-accent">
-                        <p><strong className="text-accent">Premium Trim ($10,000)</strong> – Includes Standard, plus full customization and priority support.</p>
+                      <div className="p-5 bg-gradient-to-r from-accent/5 to-accent/10 rounded-xl border-l-4 border-accent hover:shadow-medium transition-shadow duration-300">
+                        <p><strong className="text-accent text-lg">Premium Trim ($10,000)</strong></p>
+                        <p className="text-muted-foreground mt-1">Complete solution with full customization, priority support, and ongoing optimization.</p>
                       </div>
                     </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-3" className="bg-gradient-to-r from-card to-card/80 border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group backdrop-blur-sm">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 group-hover:bg-muted/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">03</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-accent-foreground font-bold text-sm">03</span>
                     </div>
-                    <span className="font-semibold text-foreground text-lg">Who are your services for?</span>
+                    <span className="font-semibold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Who are your services for?</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
-                    Our solutions are designed for businesses of all sizes that want to optimize their data workflows and improve efficiency, whether you're a growing startup, established company, or large enterprise.
+                <AccordionContent className="px-8 pb-8 text-muted-foreground leading-relaxed text-base animate-accordion-down">
+                  <div className="pl-16 pt-2">
+                    <div className="p-6 bg-muted/20 rounded-xl border-l-4 border-accent">
+                      Our solutions are designed for businesses of all sizes that want to optimize their data workflows and improve efficiency - from growing startups to established companies and large enterprises looking to modernize their data operations.
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-4" className="bg-gradient-to-r from-card to-card/80 border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group backdrop-blur-sm">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 group-hover:bg-muted/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">04</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <Clock className="h-5 w-5 text-white" />
                     </div>
-                    <span className="font-semibold text-foreground text-lg">How long does implementation take?</span>
+                    <span className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors duration-300">How long does implementation take?</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
-                    Implementation timeframes vary by package complexity, typically ranging from 2–6 weeks. We work efficiently to get you up and running as quickly as possible.
+                <AccordionContent className="px-8 pb-8 text-muted-foreground leading-relaxed text-base animate-accordion-down">
+                  <div className="pl-16 pt-2">
+                    <div className="p-6 bg-muted/20 rounded-xl border-l-4 border-primary">
+                      Implementation timeframes vary by package complexity, typically ranging from 2–6 weeks. Our experienced team works efficiently to get you up and running as quickly as possible while ensuring quality and reliability.
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-5" className="bg-gradient-to-r from-card to-card/80 border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group backdrop-blur-sm">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 group-hover:bg-muted/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">05</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <Shield className="h-5 w-5 text-white" />
                     </div>
-                    <span className="font-semibold text-foreground text-lg">Do you provide ongoing support?</span>
+                    <span className="font-semibold text-foreground text-lg group-hover:text-secondary transition-colors duration-300">Do you provide ongoing support?</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
-                    Yes! All service tiers include comprehensive support, with Premium clients receiving priority assistance and faster response times.
+                <AccordionContent className="px-8 pb-8 text-muted-foreground leading-relaxed text-base animate-accordion-down">
+                  <div className="pl-16 pt-2">
+                    <div className="p-6 bg-muted/20 rounded-xl border-l-4 border-secondary">
+                      Absolutely! All service tiers include comprehensive support with different levels of priority. Premium clients receive dedicated support with faster response times and proactive monitoring to ensure optimal performance.
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-6" className="bg-card border-0 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group">
-                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 hover:bg-muted/50 transition-colors duration-200">
+              <AccordionItem value="item-6" className="bg-gradient-to-r from-card to-card/80 border border-border/50 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group backdrop-blur-sm">
+                <AccordionTrigger className="text-left hover:no-underline px-8 py-6 group-hover:bg-muted/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-foreground font-semibold text-sm">06</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <TrendingUp className="h-5 w-5 text-white" />
                     </div>
-                    <span className="font-semibold text-foreground text-lg">Can I upgrade later?</span>
+                    <span className="font-semibold text-foreground text-lg group-hover:text-accent transition-colors duration-300">Can I upgrade my package later?</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-muted-foreground leading-relaxed text-base">
-                  <div className="pl-14">
-                    Absolutely! You can seamlessly upgrade your package at any time as your business requirements evolve and grow.
+                <AccordionContent className="px-8 pb-8 text-muted-foreground leading-relaxed text-base animate-accordion-down">
+                  <div className="pl-16 pt-2">
+                    <div className="p-6 bg-muted/20 rounded-xl border-l-4 border-accent">
+                      Yes! You can seamlessly upgrade your package at any time as your business requirements evolve and grow. We'll work with you to ensure a smooth transition with minimal disruption to your operations.
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            {/* Additional Help Section */}
+            <div className="mt-16 text-center">
+              <div className="p-8 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 rounded-3xl border border-border/50 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Still have questions?</h3>
+                <p className="text-muted-foreground mb-6 text-lg">Our expert team is here to help you find the perfect solution for your business needs.</p>
+                <Button asChild size="lg" className="bg-primary hover:bg-primary text-lg px-8 py-6">
+                  <Link to="/contact">Get in Touch</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
