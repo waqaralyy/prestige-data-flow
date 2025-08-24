@@ -75,14 +75,14 @@ const Index = () => {
                 </div>
               </header>
               
-              <div className="relative transition-all duration-300 hover:scale-105 group">
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/9adbf81a-dd0a-426a-b6e0-a8aaeac906d3.png" 
                   alt="Advanced data analytics dashboard showing charts, graphs, and business intelligence visualizations for data-driven decision making" 
-                  className="w-full h-auto rounded-2xl shadow-large transition-all duration-300 group-hover:shadow-xl group-hover:scale-110"
+                  className="w-full h-auto rounded-2xl shadow-large"
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-background/20 rounded-2xl transition-all duration-300 group-hover:bg-background/10"></div>
+                <div className="absolute inset-0 bg-background/20 rounded-2xl"></div>
               </div>
             </div>
           </div>
