@@ -184,29 +184,37 @@ const Services = () => {
           </section>
 
           {/* Client Benefits Section */}
-          <section className="py-20 bg-background" aria-labelledby="benefits-heading">
+          <section className="py-20 bg-gradient-to-br from-muted/50 to-muted" aria-labelledby="benefits-heading">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <header className="text-center space-y-4 mb-16">
-                <h2 id="benefits-heading" className="text-3xl lg:text-4xl font-bold text-foreground">
+              <header className="text-center space-y-6 mb-20">
+                <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  CLIENT BENEFITS
+                </div>
+                <h2 id="benefits-heading" className="text-4xl lg:text-5xl font-bold text-foreground bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   Why Choose Our Data Solutions?
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                   Transform your business with proven benefits that deliver real value and measurable results.
                 </p>
               </header>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {clientBenefits.map((benefit, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card border border-border">
-                    <CardHeader className="text-center space-y-4">
-                      <div className="mx-auto w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                        <benefit.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                  <Card key={index} className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/20">
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <CardHeader className="relative text-center space-y-6 pt-8">
+                      <div className="mx-auto w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-primary/25">
+                        <benefit.icon className="h-10 w-10 text-white" aria-hidden="true" />
                       </div>
-                      <CardTitle className="text-xl font-bold text-foreground">{benefit.title}</CardTitle>
+                      <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                        {benefit.title}
+                      </CardTitle>
                     </CardHeader>
-                    <CardContent className="text-center space-y-4">
-                      <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                      <div className="inline-block bg-secondary/50 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium">
+                    <CardContent className="relative text-center space-y-6 pb-8">
+                      <p className="text-lg text-muted-foreground leading-relaxed">{benefit.description}</p>
+                      <div className="inline-block bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-md group-hover:shadow-lg transition-shadow duration-300">
                         {benefit.highlight}
                       </div>
                     </CardContent>
