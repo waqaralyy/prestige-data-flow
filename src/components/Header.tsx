@@ -29,7 +29,7 @@ const Header = () => {
             />
             <div className="font-display font-semibold text-foreground flex flex-col leading-none">
               <span className="text-xl">Prestige</span>
-              <span className="text-xl">Dataops</span>
+              <span className="text-xl -mt-1">Dataops</span>
             </div>
           </Link>
 
