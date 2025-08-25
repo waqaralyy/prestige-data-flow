@@ -23,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/202a899b-1e04-467a-9ff5-4f1942017225.png" 
+              src="/lovable-uploads/fceaedf2-5117-4a40-aa3e-6cd8922269f7.png" 
               alt="Prestige DataOps Logo" 
               className="h-8 w-8 rounded-lg"
             />
