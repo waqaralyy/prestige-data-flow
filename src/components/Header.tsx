@@ -27,9 +27,9 @@ const Header = () => {
               alt="Prestige DataOps Logo" 
               className="h-8 w-8 rounded-lg"
             />
-            <div className="font-display font-semibold text-foreground flex flex-col leading-tight">
-              <span className="text-lg">Prestige</span>
-              <span className="text-lg">Dataops</span>
+            <div className="font-display font-semibold text-foreground flex flex-col leading-none">
+              <span className="text-xl">Prestige</span>
+              <span className="text-xl">Dataops</span>
             </div>
           </Link>
 
