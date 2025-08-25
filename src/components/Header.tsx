@@ -22,9 +22,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">PD</span>
-            </div>
+            <img 
+              src="/lovable-uploads/202a899b-1e04-467a-9ff5-4f1942017225.png" 
+              alt="Prestige DataOps Logo" 
+              className="h-8 w-8 rounded-lg"
+            />
             <span className="font-display font-semibold text-xl text-foreground">
               Prestige Dataops
             </span>
