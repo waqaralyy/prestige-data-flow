@@ -203,7 +203,7 @@ const Index = () => {
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-2xl font-bold text-foreground">Basic Trim</h3>
-                      <div className="text-4xl font-bold text-primary">$3,000</div>
+                      <div className="text-4xl font-bold text-primary">$5,000</div>
                     </div>
                     <div className="space-y-4 text-left">
                       <div className="flex items-start space-x-3">
@@ -241,7 +241,7 @@ const Index = () => {
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-2xl font-bold text-foreground">Standard Trim</h3>
-                      <div className="text-4xl font-bold text-secondary">$5,000</div>
+                      <div className="text-4xl font-bold text-secondary">$10,000</div>
                     </div>
                     <div className="space-y-4 text-left">
                       <div className="flex items-start space-x-3">
@@ -277,7 +277,7 @@ const Index = () => {
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-2xl font-bold text-foreground">Premium Trim</h3>
-                      <div className="text-4xl font-bold text-accent">$10,000</div>
+                      <div className="text-4xl font-bold text-accent">$18,500</div>
                     </div>
                     <div className="space-y-4 text-left">
                       <div className="flex items-start space-x-3">
